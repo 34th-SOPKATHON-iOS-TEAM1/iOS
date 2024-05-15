@@ -10,9 +10,7 @@
 		9E38DBA32BF51DDF00D1CA61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E38DBA22BF51DDF00D1CA61 /* AppDelegate.swift */; };
 		9E38DBA52BF51DDF00D1CA61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E38DBA42BF51DDF00D1CA61 /* SceneDelegate.swift */; };
 		9E38DBA72BF51DDF00D1CA61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E38DBA62BF51DDF00D1CA61 /* ViewController.swift */; };
-		9E38DBAA2BF51DDF00D1CA61 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 9E38DBA92BF51DDF00D1CA61 /* Base */; };
 		9E38DBAC2BF51DE100D1CA61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E38DBAB2BF51DE100D1CA61 /* Assets.xcassets */; };
-		9E38DBAF2BF51DE100D1CA61 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 9E38DBAE2BF51DE100D1CA61 /* Base */; };
 		9E38DBBA2BF51DE100D1CA61 /* _4th_SOPKATHON_Team1_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E38DBB92BF51DE100D1CA61 /* _4th_SOPKATHON_Team1_iOSTests.swift */; };
 		9E38DBC42BF51DE100D1CA61 /* _4th_SOPKATHON_Team1_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E38DBC32BF51DE100D1CA61 /* _4th_SOPKATHON_Team1_iOSUITests.swift */; };
 		9E38DBC62BF51DE100D1CA61 /* _4th_SOPKATHON_Team1_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E38DBC52BF51DE100D1CA61 /* _4th_SOPKATHON_Team1_iOSUITestsLaunchTests.swift */; };
@@ -40,9 +38,7 @@
 		9E38DBA22BF51DDF00D1CA61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E38DBA42BF51DDF00D1CA61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9E38DBA62BF51DDF00D1CA61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9E38DBA92BF51DDF00D1CA61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E38DBAB2BF51DE100D1CA61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9E38DBAE2BF51DE100D1CA61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E38DBB02BF51DE100D1CA61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E38DBB52BF51DE100D1CA61 /* 34th-SOPKATHON-Team1-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "34th-SOPKATHON-Team1-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E38DBB92BF51DE100D1CA61 /* _4th_SOPKATHON_Team1_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _4th_SOPKATHON_Team1_iOSTests.swift; sourceTree = "<group>"; };
@@ -102,9 +98,7 @@
 				9E38DBA22BF51DDF00D1CA61 /* AppDelegate.swift */,
 				9E38DBA42BF51DDF00D1CA61 /* SceneDelegate.swift */,
 				9E38DBA62BF51DDF00D1CA61 /* ViewController.swift */,
-				9E38DBA82BF51DDF00D1CA61 /* Main.storyboard */,
 				9E38DBAB2BF51DE100D1CA61 /* Assets.xcassets */,
-				9E38DBAD2BF51DE100D1CA61 /* LaunchScreen.storyboard */,
 				9E38DBB02BF51DE100D1CA61 /* Info.plist */,
 			);
 			path = "34th-SOPKATHON-Team1-iOS";
@@ -232,8 +226,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E38DBAC2BF51DE100D1CA61 /* Assets.xcassets in Resources */,
-				9E38DBAF2BF51DE100D1CA61 /* Base in Resources */,
-				9E38DBAA2BF51DDF00D1CA61 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,25 +287,6 @@
 			targetProxy = 9E38DBC02BF51DE100D1CA61 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		9E38DBA82BF51DDF00D1CA61 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9E38DBA92BF51DDF00D1CA61 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		9E38DBAD2BF51DE100D1CA61 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9E38DBAE2BF51DE100D1CA61 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9E38DBC72BF51DE100D1CA61 /* Debug */ = {
