@@ -11,9 +11,6 @@
 		9E38DBA52BF51DDF00D1CA61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E38DBA42BF51DDF00D1CA61 /* SceneDelegate.swift */; };
 		9E38DBA72BF51DDF00D1CA61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E38DBA62BF51DDF00D1CA61 /* ViewController.swift */; };
 		9E38DBAC2BF51DE100D1CA61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E38DBAB2BF51DE100D1CA61 /* Assets.xcassets */; };
-		9E38DBBA2BF51DE100D1CA61 /* _4th_SOPKATHON_Team1_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E38DBB92BF51DE100D1CA61 /* _4th_SOPKATHON_Team1_iOSTests.swift */; };
-		9E38DBC42BF51DE100D1CA61 /* _4th_SOPKATHON_Team1_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E38DBC32BF51DE100D1CA61 /* _4th_SOPKATHON_Team1_iOSUITests.swift */; };
-		9E38DBC62BF51DE100D1CA61 /* _4th_SOPKATHON_Team1_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E38DBC52BF51DE100D1CA61 /* _4th_SOPKATHON_Team1_iOSUITestsLaunchTests.swift */; };
 		9E38DBD42BF51FFC00D1CA61 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9E38DBD32BF51FFC00D1CA61 /* SnapKit */; };
 		9E38DBD72BF5201600D1CA61 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 9E38DBD62BF5201600D1CA61 /* Then */; };
 		9E38DBDA2BF5204500D1CA61 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 9E38DBD92BF5204500D1CA61 /* CombineMoya */; };
@@ -47,10 +44,7 @@
 		9E38DBAB2BF51DE100D1CA61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E38DBB02BF51DE100D1CA61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E38DBB52BF51DE100D1CA61 /* 34th-SOPKATHON-Team1-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "34th-SOPKATHON-Team1-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9E38DBB92BF51DE100D1CA61 /* _4th_SOPKATHON_Team1_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _4th_SOPKATHON_Team1_iOSTests.swift; sourceTree = "<group>"; };
 		9E38DBBF2BF51DE100D1CA61 /* 34th-SOPKATHON-Team1-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "34th-SOPKATHON-Team1-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9E38DBC32BF51DE100D1CA61 /* _4th_SOPKATHON_Team1_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _4th_SOPKATHON_Team1_iOSUITests.swift; sourceTree = "<group>"; };
-		9E38DBC52BF51DE100D1CA61 /* _4th_SOPKATHON_Team1_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _4th_SOPKATHON_Team1_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				9E38DBA12BF51DDF00D1CA61 /* 34th-SOPKATHON-Team1-iOS */,
-				9E38DBB82BF51DE100D1CA61 /* 34th-SOPKATHON-Team1-iOSTests */,
-				9E38DBC22BF51DE100D1CA61 /* 34th-SOPKATHON-Team1-iOSUITests */,
 				9E38DBA02BF51DDF00D1CA61 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -114,23 +106,6 @@
 				9E38DBB02BF51DE100D1CA61 /* Info.plist */,
 			);
 			path = "34th-SOPKATHON-Team1-iOS";
-			sourceTree = "<group>";
-		};
-		9E38DBB82BF51DE100D1CA61 /* 34th-SOPKATHON-Team1-iOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				9E38DBB92BF51DE100D1CA61 /* _4th_SOPKATHON_Team1_iOSTests.swift */,
-			);
-			path = "34th-SOPKATHON-Team1-iOSTests";
-			sourceTree = "<group>";
-		};
-		9E38DBC22BF51DE100D1CA61 /* 34th-SOPKATHON-Team1-iOSUITests */ = {
-			isa = PBXGroup;
-			children = (
-				9E38DBC32BF51DE100D1CA61 /* _4th_SOPKATHON_Team1_iOSUITests.swift */,
-				9E38DBC52BF51DE100D1CA61 /* _4th_SOPKATHON_Team1_iOSUITestsLaunchTests.swift */,
-			);
-			path = "34th-SOPKATHON-Team1-iOSUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,7 +260,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E38DBBA2BF51DE100D1CA61 /* _4th_SOPKATHON_Team1_iOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,8 +267,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E38DBC62BF51DE100D1CA61 /* _4th_SOPKATHON_Team1_iOSUITestsLaunchTests.swift in Sources */,
-				9E38DBC42BF51DE100D1CA61 /* _4th_SOPKATHON_Team1_iOSUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
