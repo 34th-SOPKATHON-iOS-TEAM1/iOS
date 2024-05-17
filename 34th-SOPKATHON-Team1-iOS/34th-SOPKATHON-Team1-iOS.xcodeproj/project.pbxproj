@@ -17,6 +17,19 @@
 		9E38DBDC2BF5204500D1CA61 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 9E38DBDB2BF5204500D1CA61 /* Moya */; };
 		9E38DBDE2BF5204500D1CA61 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 9E38DBDD2BF5204500D1CA61 /* ReactiveMoya */; };
 		9E38DBE02BF5204500D1CA61 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 9E38DBDF2BF5204500D1CA61 /* RxMoya */; };
+		9E38DBF62BF71D2F00D1CA61 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E38DBEB2BF71D2E00D1CA61 /* UIFont+.swift */; };
+		9E38DBF72BF71D2F00D1CA61 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9E38DBEC2BF71D2E00D1CA61 /* Pretendard-Black.otf */; };
+		9E38DBF82BF71D2F00D1CA61 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9E38DBED2BF71D2E00D1CA61 /* Pretendard-Bold.otf */; };
+		9E38DBF92BF71D2F00D1CA61 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9E38DBEE2BF71D2E00D1CA61 /* Pretendard-ExtraBold.otf */; };
+		9E38DBFA2BF71D2F00D1CA61 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9E38DBEF2BF71D2E00D1CA61 /* Pretendard-ExtraLight.otf */; };
+		9E38DBFB2BF71D2F00D1CA61 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9E38DBF02BF71D2E00D1CA61 /* Pretendard-Light.otf */; };
+		9E38DBFC2BF71D2F00D1CA61 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9E38DBF12BF71D2E00D1CA61 /* Pretendard-Medium.otf */; };
+		9E38DBFD2BF71D2F00D1CA61 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9E38DBF22BF71D2E00D1CA61 /* Pretendard-Regular.otf */; };
+		9E38DBFE2BF71D2F00D1CA61 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9E38DBF32BF71D2E00D1CA61 /* Pretendard-SemiBold.otf */; };
+		9E38DBFF2BF71D2F00D1CA61 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9E38DBF42BF71D2E00D1CA61 /* Pretendard-Thin.otf */; };
+		9E38DC022BF71FB200D1CA61 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E38DC012BF71FB200D1CA61 /* UIView+.swift */; };
+		9E38DC042BF720F200D1CA61 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E38DC032BF720F200D1CA61 /* UIStackView+.swift */; };
+		9E38DC062BF7213E00D1CA61 /* UICollectionViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E38DC052BF7213E00D1CA61 /* UICollectionViewCell+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +58,19 @@
 		9E38DBB02BF51DE100D1CA61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E38DBB52BF51DE100D1CA61 /* 34th-SOPKATHON-Team1-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "34th-SOPKATHON-Team1-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E38DBBF2BF51DE100D1CA61 /* 34th-SOPKATHON-Team1-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "34th-SOPKATHON-Team1-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E38DBEB2BF71D2E00D1CA61 /* UIFont+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
+		9E38DBEC2BF71D2E00D1CA61 /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
+		9E38DBED2BF71D2E00D1CA61 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		9E38DBEE2BF71D2E00D1CA61 /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
+		9E38DBEF2BF71D2E00D1CA61 /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
+		9E38DBF02BF71D2E00D1CA61 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
+		9E38DBF12BF71D2E00D1CA61 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		9E38DBF22BF71D2E00D1CA61 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		9E38DBF32BF71D2E00D1CA61 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		9E38DBF42BF71D2E00D1CA61 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
+		9E38DC012BF71FB200D1CA61 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		9E38DC032BF720F200D1CA61 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
+		9E38DC052BF7213E00D1CA61 /* UICollectionViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +130,37 @@
 				9E38DBA62BF51DDF00D1CA61 /* ViewController.swift */,
 				9E38DBAB2BF51DE100D1CA61 /* Assets.xcassets */,
 				9E38DBB02BF51DE100D1CA61 /* Info.plist */,
+				9E38DBF52BF71D2E00D1CA61 /* Font */,
+				9E38DC002BF71D4B00D1CA61 /* Extensions */,
 			);
 			path = "34th-SOPKATHON-Team1-iOS";
+			sourceTree = "<group>";
+		};
+		9E38DBF52BF71D2E00D1CA61 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				9E38DBEC2BF71D2E00D1CA61 /* Pretendard-Black.otf */,
+				9E38DBED2BF71D2E00D1CA61 /* Pretendard-Bold.otf */,
+				9E38DBEE2BF71D2E00D1CA61 /* Pretendard-ExtraBold.otf */,
+				9E38DBEF2BF71D2E00D1CA61 /* Pretendard-ExtraLight.otf */,
+				9E38DBF02BF71D2E00D1CA61 /* Pretendard-Light.otf */,
+				9E38DBF12BF71D2E00D1CA61 /* Pretendard-Medium.otf */,
+				9E38DBF22BF71D2E00D1CA61 /* Pretendard-Regular.otf */,
+				9E38DBF32BF71D2E00D1CA61 /* Pretendard-SemiBold.otf */,
+				9E38DBF42BF71D2E00D1CA61 /* Pretendard-Thin.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		9E38DC002BF71D4B00D1CA61 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9E38DBEB2BF71D2E00D1CA61 /* UIFont+.swift */,
+				9E38DC012BF71FB200D1CA61 /* UIView+.swift */,
+				9E38DC032BF720F200D1CA61 /* UIStackView+.swift */,
+				9E38DC052BF7213E00D1CA61 /* UICollectionViewCell+.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,7 +280,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E38DBFC2BF71D2F00D1CA61 /* Pretendard-Medium.otf in Resources */,
+				9E38DBFF2BF71D2F00D1CA61 /* Pretendard-Thin.otf in Resources */,
+				9E38DBF72BF71D2F00D1CA61 /* Pretendard-Black.otf in Resources */,
+				9E38DBF82BF71D2F00D1CA61 /* Pretendard-Bold.otf in Resources */,
+				9E38DBFA2BF71D2F00D1CA61 /* Pretendard-ExtraLight.otf in Resources */,
+				9E38DBF92BF71D2F00D1CA61 /* Pretendard-ExtraBold.otf in Resources */,
+				9E38DBFD2BF71D2F00D1CA61 /* Pretendard-Regular.otf in Resources */,
+				9E38DBFE2BF71D2F00D1CA61 /* Pretendard-SemiBold.otf in Resources */,
 				9E38DBAC2BF51DE100D1CA61 /* Assets.xcassets in Resources */,
+				9E38DBFB2BF71D2F00D1CA61 /* Pretendard-Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,9 +314,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E38DBF62BF71D2F00D1CA61 /* UIFont+.swift in Sources */,
+				9E38DC062BF7213E00D1CA61 /* UICollectionViewCell+.swift in Sources */,
+				9E38DC042BF720F200D1CA61 /* UIStackView+.swift in Sources */,
 				9E38DBA72BF51DDF00D1CA61 /* ViewController.swift in Sources */,
 				9E38DBA32BF51DDF00D1CA61 /* AppDelegate.swift in Sources */,
 				9E38DBA52BF51DDF00D1CA61 /* SceneDelegate.swift in Sources */,
+				9E38DC022BF71FB200D1CA61 /* UIView+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
