@@ -27,6 +27,7 @@ final class OnBoardingViewController: UIViewController {
         setHierarchy()
         setLayout()
         setStyle()
+        setDelegate()
     }
     
 }
@@ -52,4 +53,19 @@ private extension OnBoardingViewController {
         self.view.backgroundColor = UIColor(resource: .white000)
     }
     
+    func setDelegate() {
+        self.onBoardingView.delegate = self
+    }
+    
+}
+
+// MARK: - Delegates
+
+extension OnBoardingViewController: OnBoardingViewDelegate {
+    
+    func pushToRegisterToDoVC() {
+        print("pushToRegisterToDoVC")
+//        let registerVC = RegisterToDoViewController()
+//        self.navigationController?.pushViewController(registerVC, animated: true)
+    }
 }
