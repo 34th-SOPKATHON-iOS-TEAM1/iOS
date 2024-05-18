@@ -19,6 +19,11 @@
 		CA2CBE212BF8DEC800049F8F /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = CA2CBE202BF8DEC800049F8F /* Moya */; };
 		CA2CBE232BF8DEC800049F8F /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = CA2CBE222BF8DEC800049F8F /* ReactiveMoya */; };
 		CA2CBE252BF8DEC800049F8F /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = CA2CBE242BF8DEC800049F8F /* RxMoya */; };
+		CA2CBE292BF8DF5600049F8F /* UICollectionViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE282BF8DF5600049F8F /* UICollectionViewCell+.swift */; };
+		CA2CBE2B2BF8DF9C00049F8F /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE2A2BF8DF9C00049F8F /* UIFont+.swift */; };
+		CA2CBE2D2BF8DFDC00049F8F /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE2C2BF8DFDC00049F8F /* UIStackView+.swift */; };
+		CA2CBE2F2BF8DFF400049F8F /* UITableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE2E2BF8DFF400049F8F /* UITableViewCell+.swift */; };
+		CA2CBE312BF8E00600049F8F /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE302BF8E00600049F8F /* UIView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +34,11 @@
 		CA2CBE0A2BF8DD3C00049F8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA2CBE0D2BF8DD3C00049F8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA2CBE0F2BF8DD3C00049F8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA2CBE282BF8DF5600049F8F /* UICollectionViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+.swift"; sourceTree = "<group>"; };
+		CA2CBE2A2BF8DF9C00049F8F /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
+		CA2CBE2C2BF8DFDC00049F8F /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
+		CA2CBE2E2BF8DFF400049F8F /* UITableViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
+		CA2CBE302BF8E00600049F8F /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +78,7 @@
 		CA2CBE002BF8DD3A00049F8F /* 34th-SOPKATHON-Team1-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				CA2CBE262BF8DF3800049F8F /* Global */,
 				CA2CBE012BF8DD3A00049F8F /* AppDelegate.swift */,
 				CA2CBE032BF8DD3A00049F8F /* SceneDelegate.swift */,
 				CA2CBE052BF8DD3A00049F8F /* ViewController.swift */,
@@ -76,6 +87,26 @@
 				CA2CBE0F2BF8DD3C00049F8F /* Info.plist */,
 			);
 			path = "34th-SOPKATHON-Team1-iOS";
+			sourceTree = "<group>";
+		};
+		CA2CBE262BF8DF3800049F8F /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				CA2CBE272BF8DF4200049F8F /* Extensions */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		CA2CBE272BF8DF4200049F8F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CA2CBE282BF8DF5600049F8F /* UICollectionViewCell+.swift */,
+				CA2CBE2A2BF8DF9C00049F8F /* UIFont+.swift */,
+				CA2CBE2C2BF8DFDC00049F8F /* UIStackView+.swift */,
+				CA2CBE2E2BF8DFF400049F8F /* UITableViewCell+.swift */,
+				CA2CBE302BF8E00600049F8F /* UIView+.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,7 +194,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA2CBE062BF8DD3A00049F8F /* ViewController.swift in Sources */,
+				CA2CBE2D2BF8DFDC00049F8F /* UIStackView+.swift in Sources */,
+				CA2CBE2F2BF8DFF400049F8F /* UITableViewCell+.swift in Sources */,
 				CA2CBE022BF8DD3A00049F8F /* AppDelegate.swift in Sources */,
+				CA2CBE312BF8E00600049F8F /* UIView+.swift in Sources */,
+				CA2CBE2B2BF8DF9C00049F8F /* UIFont+.swift in Sources */,
+				CA2CBE292BF8DF5600049F8F /* UICollectionViewCell+.swift in Sources */,
 				CA2CBE042BF8DD3A00049F8F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
