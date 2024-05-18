@@ -85,7 +85,7 @@ extension RegisterNotToDoView {
         }
         
         discriptionLabel.do {
-            $0.text = "NOT TO-DO에 대한 설명이 간단하게 들어갑니다."
+            $0.text = "하지 말아야 할 일을 적어주세요."
             $0.textColor = .gray800
             $0.font = .pretendard(.title2)
         }
