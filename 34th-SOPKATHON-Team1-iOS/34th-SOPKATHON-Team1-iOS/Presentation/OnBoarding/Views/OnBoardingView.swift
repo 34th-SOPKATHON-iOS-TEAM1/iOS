@@ -19,7 +19,7 @@ final class OnBoardingView: UIView {
     
     private let noticeLabel: UILabel = UILabel()
     
-    private let inputTextField: UITextField = UITextField()
+    let inputTextField: UITextField = UITextField()
     
     private let startButton: UIButton = UIButton()
     

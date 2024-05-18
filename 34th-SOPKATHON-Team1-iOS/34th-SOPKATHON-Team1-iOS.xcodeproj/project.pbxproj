@@ -24,6 +24,8 @@
 		CA0C2CBE2BF933CE0026C6C7 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA0C2CBD2BF933CE0026C6C7 /* Montserrat-Bold.otf */; };
 		CA0C2CC12BF9478E0026C6C7 /* lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = CA0C2CC02BF9478E0026C6C7 /* lottie.json */; };
 		CA0C2CC42BF948290026C6C7 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = CA0C2CC32BF948290026C6C7 /* Lottie */; };
+		CA0C2CC72BF95CC90026C6C7 /* OnBoardingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0C2CC62BF95CC90026C6C7 /* OnBoardingService.swift */; };
+		CA0C2CCC2BF965C40026C6C7 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0C2CCB2BF965C40026C6C7 /* RegisterService.swift */; };
 		CA2CBE022BF8DD3A00049F8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE012BF8DD3A00049F8F /* AppDelegate.swift */; };
 		CA2CBE042BF8DD3A00049F8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE032BF8DD3A00049F8F /* SceneDelegate.swift */; };
 		CA2CBE062BF8DD3A00049F8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE052BF8DD3A00049F8F /* ViewController.swift */; };
@@ -67,7 +69,6 @@
 		9E3FBA3F2BF94A370085B6F1 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		9E3FBA412BF94A480085B6F1 /* MoyaLoggingPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaLoggingPlugin.swift; sourceTree = "<group>"; };
 		9E3FBA432BF94A710085B6F1 /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
-		9E3FBA452BF94AEB0085B6F1 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		9E3FBA472BF94BAB0085B6F1 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		9E3FBA4A2BF94FA40085B6F1 /* GetAllResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllResponseDTO.swift; sourceTree = "<group>"; };
 		9E3FBA4C2BF950630085B6F1 /* BasicResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicResponseDTO.swift; sourceTree = "<group>"; };
@@ -77,6 +78,9 @@
 		CA0C2CBB2BF931F70026C6C7 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		CA0C2CBD2BF933CE0026C6C7 /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
 		CA0C2CC02BF9478E0026C6C7 /* lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottie.json; sourceTree = "<group>"; };
+		CA0C2CC62BF95CC90026C6C7 /* OnBoardingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingService.swift; sourceTree = "<group>"; };
+		CA0C2CC92BF95F140026C6C7 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		CA0C2CCB2BF965C40026C6C7 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
 		CA2CBDFE2BF8DD3A00049F8F /* 34th-SOPKATHON-Team1-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "34th-SOPKATHON-Team1-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA2CBE012BF8DD3A00049F8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA2CBE032BF8DD3A00049F8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +166,8 @@
 		9E3FBA3D2BF949E50085B6F1 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				CA0C2CCA2BF965B60026C6C7 /* Register */,
+				CA0C2CC52BF95C890026C6C7 /* OnBoarding */,
 				9E3FBA4E2BF951C80085B6F1 /* RequestDTO */,
 				9E3FBA492BF94F7D0085B6F1 /* ResponseDTO */,
 				9E3FBA3E2BF94A280085B6F1 /* Base */,
@@ -175,7 +181,7 @@
 				9E3FBA3F2BF94A370085B6F1 /* NetworkResult.swift */,
 				9E3FBA412BF94A480085B6F1 /* MoyaLoggingPlugin.swift */,
 				9E3FBA432BF94A710085B6F1 /* BaseTargetType.swift */,
-				9E3FBA452BF94AEB0085B6F1 /* Config.xcconfig */,
+				CA0C2CC92BF95F140026C6C7 /* Config.xcconfig */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -221,6 +227,22 @@
 				CA0C2CC02BF9478E0026C6C7 /* lottie.json */,
 			);
 			path = Lottie;
+			sourceTree = "<group>";
+		};
+		CA0C2CC52BF95C890026C6C7 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				CA0C2CC62BF95CC90026C6C7 /* OnBoardingService.swift */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		CA0C2CCA2BF965B60026C6C7 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				CA0C2CCB2BF965C40026C6C7 /* RegisterService.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 		CA2CBDF52BF8DD3A00049F8F = {
@@ -494,6 +516,7 @@
 				CA2CBE2D2BF8DFDC00049F8F /* UIStackView+.swift in Sources */,
 				D014574B2BF9213300A6E0AF /* RegisterToDoViewController.swift in Sources */,
 				9E3FBA4D2BF950630085B6F1 /* BasicResponseDTO.swift in Sources */,
+				CA0C2CC72BF95CC90026C6C7 /* OnBoardingService.swift in Sources */,
 				CA2CBE432BF8F60D00049F8F /* UILabel+.swift in Sources */,
 				9E3FBA4B2BF94FA40085B6F1 /* GetAllResponseDTO.swift in Sources */,
 				D014574E2BF9215800A6E0AF /* RegisterToDoView.swift in Sources */,
@@ -505,6 +528,7 @@
 				9E3FBA542BF952ED0085B6F1 /* PostTodoRequestBody.swift in Sources */,
 				787FA9012BF915BD007E5610 /* TodoCVC.swift in Sources */,
 				CA2CBE2F2BF8DFF400049F8F /* UITableViewCell+.swift in Sources */,
+				CA0C2CCC2BF965C40026C6C7 /* RegisterService.swift in Sources */,
 				CA2CBE022BF8DD3A00049F8F /* AppDelegate.swift in Sources */,
 				CA2CBE312BF8E00600049F8F /* UIView+.swift in Sources */,
 				CA2CBE2B2BF8DF9C00049F8F /* UIFont+.swift in Sources */,
@@ -538,6 +562,7 @@
 /* Begin XCBuildConfiguration section */
 		CA2CBE102BF8DD3C00049F8F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA0C2CC92BF95F140026C6C7 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -601,7 +626,7 @@
 		};
 		CA2CBE112BF8DD3C00049F8F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E3FBA452BF94AEB0085B6F1 /* Config.xcconfig */;
+			baseConfigurationReference = CA0C2CC92BF95F140026C6C7 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -658,6 +683,7 @@
 		};
 		CA2CBE132BF8DD3C00049F8F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA0C2CC92BF95F140026C6C7 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -685,7 +711,7 @@
 		};
 		CA2CBE142BF8DD3C00049F8F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E3FBA452BF94AEB0085B6F1 /* Config.xcconfig */;
+			baseConfigurationReference = CA0C2CC92BF95F140026C6C7 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

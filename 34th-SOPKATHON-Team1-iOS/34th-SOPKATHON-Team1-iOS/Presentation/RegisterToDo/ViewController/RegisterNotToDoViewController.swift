@@ -44,6 +44,23 @@ extension RegisterNotToDoViewController {
         rootView.nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
     }
     
+    func postNotToDo() {
+        let text1 = self.rootView.notTodoTextField1.text ?? ""
+        let text2 = self.rootView.notTodoTextField2.text ?? ""
+        let text3 = self.rootView.notTodoTextField3.text ?? ""
+
+        RegisterService.shared.postNotToDo(todoContent: PostNotTodoRequestBody(notTodoContent: [text1, text2, text3])) { response in
+            switch response {
+            case .success:
+                let CheckToDoVC = CheckToDoViewController()
+                
+                self.navigationController?.pushViewController(CheckToDoVC, animated: true)
+            default:
+                return
+            }
+        }
+    }
+    
     @objc func clearButtonTapped(_ button: UIButton) {
         switch button.tag {
         case 1:
@@ -64,9 +81,7 @@ extension RegisterNotToDoViewController {
     }
     
     @objc func nextButtonTapped(_ button: UIButton) {
-        let CheckToDoVC = CheckToDoViewController()
-        
-        navigationController?.pushViewController(CheckToDoVC, animated: true)
+        self.postNotToDo()
     }
 
 }

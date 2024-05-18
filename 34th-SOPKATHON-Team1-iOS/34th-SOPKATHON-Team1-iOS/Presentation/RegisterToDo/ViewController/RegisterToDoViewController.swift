@@ -44,6 +44,23 @@ extension RegisterToDoViewController {
         rootView.nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
     }
     
+    func postToDo() {
+        let text1 = self.rootView.todoTextField1.text ?? ""
+        let text2 = self.rootView.todoTextField2.text ?? ""
+        let text3 = self.rootView.todoTextField3.text ?? ""
+
+        RegisterService.shared.postToDo(todoContent: PostTodoRequestBody(todoContent: [text1, text2, text3])) { response in
+            switch response {
+            case .success:
+                let RegisterNotToDoVC = RegisterNotToDoViewController()
+                
+                self.navigationController?.pushViewController(RegisterNotToDoVC, animated: true)
+            default:
+                return
+            }
+        }
+    }
+    
     @objc func clearButtonTapped(_ button: UIButton) {
         switch button.tag {
         case 1:
@@ -64,9 +81,7 @@ extension RegisterToDoViewController {
     }
     
     @objc func nextButtonTapped(_ button: UIButton) {
-        let RegisterNotToDoVC = RegisterNotToDoViewController()
-        
-        navigationController?.pushViewController(RegisterNotToDoVC, animated: true)
+        self.postToDo()
     }
 }
 

@@ -57,6 +57,19 @@ private extension OnBoardingViewController {
         self.onBoardingView.delegate = self
     }
     
+    func postGoal() {
+        let text = self.onBoardingView.inputTextField.text ?? ""
+        OnBoardingService.shared.postGoal(goalContent: PostGoalRequestBody(goalContent: text)) { response in
+            switch response {
+            case .success:
+                let registerVC = RegisterToDoViewController()
+                self.navigationController?.pushViewController(registerVC, animated: true)
+            default:
+                return
+            }
+        }
+    }
+    
 }
 
 // MARK: - Delegates
@@ -64,8 +77,6 @@ private extension OnBoardingViewController {
 extension OnBoardingViewController: OnBoardingViewDelegate {
     
     func pushToRegisterToDoVC() {
-        print("pushToRegisterToDoVC")
-//        let registerVC = RegisterToDoViewController()
-//        self.navigationController?.pushViewController(registerVC, animated: true)
+        self.postGoal()
     }
 }

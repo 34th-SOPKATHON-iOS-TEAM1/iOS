@@ -12,9 +12,9 @@ import Moya
 
 enum BaseTargetType: TargetType {
     
-    case postGoal(request: [String])
-    case postToDo(request: [String])
-    case postNotToDo(request: [String])
+    case postGoal(request: PostGoalRequestBody)
+    case postToDo(request: PostTodoRequestBody)
+    case postNotToDo(request: PostNotTodoRequestBody)
     case getAll
 }
 
