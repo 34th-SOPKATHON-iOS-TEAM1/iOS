@@ -105,23 +105,22 @@ class TodoCVC: UICollectionViewCell {
     
     @objc private func firstButtonTapped() {
         isFirstButtonPressed.toggle()
-        firstButton.backgroundColor = isFirstButtonPressed ? .green : .blue
+        firstRowView.backgroundColor = isFirstButtonPressed ? .mint400 : UIColor.gray400
         delegate?.buttonStateChanged(buttonIdentifier: "Todo1", isPressed: isFirstButtonPressed)
     }
-    
-    
+
     @objc private func secondButtonTapped() {
         isSecondButtonPressed.toggle()
-        secondButton.backgroundColor = isSecondButtonPressed ? .green : .blue
-        
-        delegate?.buttonStateChanged(buttonIdentifier: "Todo1", isPressed: isSecondButtonPressed)
+        secondRowView.backgroundColor = isSecondButtonPressed ? .mint400 : UIColor.gray400
+        delegate?.buttonStateChanged(buttonIdentifier: "Todo2", isPressed: isSecondButtonPressed)
     }
-    
+
     @objc private func thirdButtonTapped() {
         isThirdButtonPressed.toggle()
-        thirdButton.backgroundColor = isThirdButtonPressed ? .green : .blue
-        delegate?.buttonStateChanged(buttonIdentifier: "Todo1", isPressed: isThirdButtonPressed)
+        thirdRowView.backgroundColor = isThirdButtonPressed ? .mint400 : UIColor.gray400
+        delegate?.buttonStateChanged(buttonIdentifier: "Todo3", isPressed: isThirdButtonPressed)
     }
+
     
     
     
@@ -158,11 +157,12 @@ class TodoCVC: UICollectionViewCell {
         }
         
         button.snp.makeConstraints {
-            $0.trailing.equalTo(view.snp.trailing).offset(-16)
+            $0.trailing.equalTo(view.snp.trailing).offset(-4)
             $0.centerY.equalTo(view.snp.centerY)
-            $0.width.equalTo(40)
-            $0.height.equalTo(25)
+            $0.width.height.equalTo(40)
+            $0.top.bottom.equalTo(view).inset(4)
         }
+
         
         view.snp.makeConstraints {
             if view == firstRowView {
