@@ -54,33 +54,38 @@ class NotTodoCVC: UICollectionViewCell {
         }
         
         firstRowView.do {
-            $0.backgroundColor = UIColor.gray400
+            $0.backgroundColor = UIColor.brown100
             $0.layer.cornerRadius = 8
         }
         
         secondRowView.do {
-            $0.backgroundColor = UIColor.gray400
+            $0.backgroundColor = UIColor.brown100
             $0.layer.cornerRadius = 8
         }
         
         thirdRowView.do {
-            $0.backgroundColor = UIColor.gray400
+            $0.backgroundColor = UIColor.brown100
             $0.layer.cornerRadius = 8
         }
         
         firstLabel.do {
-            $0.text = "1"
+            $0.text = "-1"
             $0.font = UIFont.pretendard(.title2)
+            $0.textColor = .gray800
         }
         
         secondLabel.do {
-            $0.text = "2"
+            $0.text = "-2"
             $0.font = UIFont.pretendard(.title2)
+            $0.textColor = .gray800
+
         }
         
         thirdLabel.do {
-            $0.text = "3"
+            $0.text = "-3"
             $0.font = UIFont.pretendard(.title2)
+            $0.textColor = .gray800
+
         }
         
         setupButton(firstButton)
@@ -90,12 +95,12 @@ class NotTodoCVC: UICollectionViewCell {
     
     private func setupButton(_ button: UIButton) {
         button.do {
-            $0.setTitle("C", for: .normal)
-            $0.setTitleColor(.black, for: .normal)
-            $0.backgroundColor = .blue
+            $0.setImage(UIImage(named: "todoCheckBtn"), for: .normal)
+            $0.backgroundColor = .clear
             $0.layer.cornerRadius = 5
         }
     }
+    
     
     private func setupButtonActions() {
         firstButton.addTarget(self, action: #selector(firstButtonTapped), for: .touchUpInside)
@@ -105,23 +110,24 @@ class NotTodoCVC: UICollectionViewCell {
     
     @objc private func firstButtonTapped() {
         isFirstButtonPressed.toggle()
-        firstButton.backgroundColor = isFirstButtonPressed ? .green : .blue
+        firstRowView.backgroundColor = isFirstButtonPressed ? .brown400 : UIColor.gray400
         delegate?.buttonStateChanged(buttonIdentifier: "NotTodo1", isPressed: isFirstButtonPressed)
     }
-
+    
     @objc private func secondButtonTapped() {
         isSecondButtonPressed.toggle()
-        secondButton.backgroundColor = isSecondButtonPressed ? .green : .blue
+        secondRowView.backgroundColor = isSecondButtonPressed ? .brown400 : UIColor.gray400
         delegate?.buttonStateChanged(buttonIdentifier: "NotTodo2", isPressed: isSecondButtonPressed)
     }
-
+    
     @objc private func thirdButtonTapped() {
         isThirdButtonPressed.toggle()
-        thirdButton.backgroundColor = isThirdButtonPressed ? .green : .blue
+        thirdRowView.backgroundColor = isThirdButtonPressed ? .brown400 : UIColor.gray400
         delegate?.buttonStateChanged(buttonIdentifier: "NotTodo3", isPressed: isThirdButtonPressed)
     }
-
-
+    
+    
+    
     
     private func setupLayout() {
         addSubview(titleLabel)
@@ -156,11 +162,12 @@ class NotTodoCVC: UICollectionViewCell {
         }
         
         button.snp.makeConstraints {
-            $0.trailing.equalTo(view.snp.trailing).offset(-16)
+            $0.trailing.equalTo(view.snp.trailing).offset(-4)
             $0.centerY.equalTo(view.snp.centerY)
-            $0.width.equalTo(40)
-            $0.height.equalTo(25)
+            $0.width.height.equalTo(40)
+            $0.top.bottom.equalTo(view).inset(4)
         }
+        
         
         view.snp.makeConstraints {
             if view == firstRowView {

@@ -71,16 +71,22 @@ class TodoCVC: UICollectionViewCell {
         firstLabel.do {
             $0.text = "1"
             $0.font = UIFont.pretendard(.title2)
+            $0.textColor = .gray800
+
         }
         
         secondLabel.do {
             $0.text = "2"
             $0.font = UIFont.pretendard(.title2)
+            $0.textColor = .gray800
+
         }
         
         thirdLabel.do {
             $0.text = "3"
             $0.font = UIFont.pretendard(.title2)
+            $0.textColor = .gray800
+
         }
         
         setupButton(firstButton)
@@ -89,13 +95,13 @@ class TodoCVC: UICollectionViewCell {
     }
     
     private func setupButton(_ button: UIButton) {
-        button.do {
-            $0.setTitle("C", for: .normal)
-            $0.setTitleColor(.black, for: .normal)
-            $0.backgroundColor = .blue
-            $0.layer.cornerRadius = 5
+            button.do {
+                $0.setImage(UIImage(named: "todoCheckBtn"), for: .normal)
+                $0.backgroundColor = .clear
+                $0.layer.cornerRadius = 5
+            }
         }
-    }
+
     
     private func setupButtonActions() {
         firstButton.addTarget(self, action: #selector(firstButtonTapped), for: .touchUpInside)
