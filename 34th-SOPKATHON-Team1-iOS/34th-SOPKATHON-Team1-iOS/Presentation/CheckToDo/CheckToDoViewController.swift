@@ -10,9 +10,8 @@ import SnapKit
 import Then
 
 protocol TodoCellDelegate: AnyObject {
-    func buttonStateDidChange()
+    func buttonStateChanged(buttonIdentifier: String, isPressed: Bool)
 }
-
 
 class CheckToDoViewController: UIViewController {
     
@@ -23,6 +22,15 @@ class CheckToDoViewController: UIViewController {
     private var centerLabel = UILabel()
     
     private var collectionView: UICollectionView!
+    
+    var buttonStates = [String: Bool]()
+
+    let imageMapping: [String: Int] = [
+            "000000": 1, "000001": 2, "000010": 3, "000011": 4, "000100": 5, "000101": 6,
+            "000110": 7, "000111": 8, "001000": 9, "001001": 10, "001010": 11, "001011": 12,
+            // 사진 보고 매핑
+            "111100": 61, "111101": 62, "111110": 63, "111111": 64
+        ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -126,26 +134,31 @@ extension CheckToDoViewController :  UICollectionViewDelegate, UICollectionViewD
         }
     }
 
-}
-extension CheckToDoViewController: TodoCellDelegate {
-    func buttonStateDidChange() {
-        DispatchQueue.main.async {
-            self.updateImageBasedOnState()
-        }
-    }
-    
-    private func updateImageBasedOnState() {
-        
-        let imageIndex = calculateImageIndex()
-        mainSeeSawImageView.image = UIImage(named: "dummy\(imageIndex)")
-        print(1)
-    }
-    
-    private func calculateImageIndex() -> Int {
-        return 2
-    }
+
 }
 
+extension CheckToDoViewController: TodoCellDelegate {
+    
+    func buttonStateChanged(buttonIdentifier: String, isPressed: Bool) {
+           buttonStates[buttonIdentifier] = isPressed
+           updateImageBasedOnState()
+       }
+       
+
+        private func updateImageBasedOnState() {
+            let key = getStateKey()
+            let imageIndex = imageMapping[key, default: 1]
+            mainSeeSawImageView.image = UIImage(named: "dummy\(imageIndex)")
+        }
+
+        private func getStateKey() -> String {
+            let keys = ["Todo1", "Todo2", "Todo3", "NotTodo1", "NotTodo2", "NotTodo3"]
+            return keys.map { buttonStates[$0, default: false] ? "1" : "0" }.joined()
+        }
+
+}
+
+//
 //
 //#Preview {
 //    CheckToDoViewController()

@@ -106,7 +106,7 @@ class TodoCVC: UICollectionViewCell {
     @objc private func firstButtonTapped() {
         isFirstButtonPressed.toggle()
         firstButton.backgroundColor = isFirstButtonPressed ? .green : .blue
-        delegate?.buttonStateDidChange()
+        delegate?.buttonStateChanged(buttonIdentifier: "Todo1", isPressed: isFirstButtonPressed)
     }
     
     
@@ -114,13 +114,13 @@ class TodoCVC: UICollectionViewCell {
         isSecondButtonPressed.toggle()
         secondButton.backgroundColor = isSecondButtonPressed ? .green : .blue
         
-        delegate?.buttonStateDidChange()
+        delegate?.buttonStateChanged(buttonIdentifier: "Todo1", isPressed: isSecondButtonPressed)
     }
     
     @objc private func thirdButtonTapped() {
         isThirdButtonPressed.toggle()
         thirdButton.backgroundColor = isThirdButtonPressed ? .green : .blue
-        delegate?.buttonStateDidChange()
+        delegate?.buttonStateChanged(buttonIdentifier: "Todo1", isPressed: isThirdButtonPressed)
     }
     
     
