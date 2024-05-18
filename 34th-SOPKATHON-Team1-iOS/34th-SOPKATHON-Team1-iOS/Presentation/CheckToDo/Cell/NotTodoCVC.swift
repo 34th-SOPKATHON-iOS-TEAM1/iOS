@@ -106,26 +106,22 @@ class NotTodoCVC: UICollectionViewCell {
     @objc private func firstButtonTapped() {
         isFirstButtonPressed.toggle()
         firstButton.backgroundColor = isFirstButtonPressed ? .green : .blue
-       
-
-        delegate?.buttonStateDidChange()
+        delegate?.buttonStateChanged(buttonIdentifier: "NotTodo1", isPressed: isFirstButtonPressed)
     }
-    
-    
+
     @objc private func secondButtonTapped() {
         isSecondButtonPressed.toggle()
         secondButton.backgroundColor = isSecondButtonPressed ? .green : .blue
-        
-        delegate?.buttonStateDidChange()
+        delegate?.buttonStateChanged(buttonIdentifier: "NotTodo2", isPressed: isSecondButtonPressed)
     }
-    
+
     @objc private func thirdButtonTapped() {
         isThirdButtonPressed.toggle()
         thirdButton.backgroundColor = isThirdButtonPressed ? .green : .blue
-        delegate?.buttonStateDidChange()
+        delegate?.buttonStateChanged(buttonIdentifier: "NotTodo3", isPressed: isThirdButtonPressed)
     }
-    
-    
+
+
     
     private func setupLayout() {
         addSubview(titleLabel)
