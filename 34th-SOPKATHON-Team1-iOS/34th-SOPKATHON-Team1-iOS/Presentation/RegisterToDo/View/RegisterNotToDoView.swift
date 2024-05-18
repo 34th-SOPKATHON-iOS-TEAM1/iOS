@@ -114,18 +114,18 @@ extension RegisterNotToDoView {
         }
         
         indexImage1.do {
-            $0.image = .imgGray1
+            $0.image = .imgGrayNega1
             $0.frame = CGRect(x: 24, y: 0, width: 32, height: 32)
 
         }
         
         indexImage2.do {
-            $0.image = .imgGray2
+            $0.image = .imgGrayNega2
             $0.frame = CGRect(x: 24, y: 0, width: 32, height: 32)
         }
         
         indexImage3.do {
-            $0.image = .imgGray3
+            $0.image = .imgGrayNega3
             $0.frame = CGRect(x: 24, y: 0, width: 32, height: 32)
         }
         
@@ -307,8 +307,22 @@ extension RegisterNotToDoView: UITextFieldDelegate {
 
         if text.isEmpty {
             textField.rightViewMode = .never
+            if textField == notTodoTextField1 {
+                indexImage1.image = .imgGrayNega1
+            } else if textField == notTodoTextField2 {
+                indexImage2.image = .imgGrayNega2
+            } else {
+                indexImage3.image = .imgGrayNega3
+            }
         } else {
             textField.rightViewMode = .always
+            if textField == notTodoTextField1 {
+                indexImage1.image = .imgBrown1
+            } else if textField == notTodoTextField2 {
+                indexImage2.image = .imgBrown2
+            } else {
+                indexImage3.image = .imgBrown3
+            }
         }
     }
 }
