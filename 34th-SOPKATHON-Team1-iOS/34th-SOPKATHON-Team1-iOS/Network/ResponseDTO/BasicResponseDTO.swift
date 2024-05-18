@@ -13,5 +13,5 @@ import Foundation
 struct BasicResponseDTO: Codable {
     let status: Int
     let message: String
-    let data: T?
+    let data: Data?
 }

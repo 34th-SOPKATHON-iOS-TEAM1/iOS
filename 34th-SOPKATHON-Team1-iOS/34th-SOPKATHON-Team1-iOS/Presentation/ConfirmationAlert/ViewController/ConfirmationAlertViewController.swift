@@ -108,7 +108,10 @@ class ConfirmationAlertViewController: UIViewController {
    }
    
    @objc func didTapgoToSeeS0wBtn() {
-      print("~didTapgoToSeeS0wBtn~")
+       let alertVC = SuccessViewController()
+       alertVC.modalPresentationStyle = .formSheet
+       self.present(alertVC, animated: true)
+
    }
    
 }
