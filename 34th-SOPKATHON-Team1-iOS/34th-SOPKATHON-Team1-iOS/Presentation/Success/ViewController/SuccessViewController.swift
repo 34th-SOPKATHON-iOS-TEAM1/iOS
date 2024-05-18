@@ -92,7 +92,7 @@ class SuccessViewController: UIViewController {
       container.snp.makeConstraints {
          $0.top.equalToSuperview()
          $0.leading.trailing.equalToSuperview().inset(16)
-         $0.height.equalTo(307)
+         $0.height.equalTo(337)
       }
       
       cancelBtn.snp.makeConstraints {
