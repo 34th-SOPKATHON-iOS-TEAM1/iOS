@@ -13,6 +13,10 @@ final class OnBoardingViewController: UIViewController {
     
     private let graphicImageView: UIImageView = UIImageView()
     
+    private let noticeLabel: UILabel = UILabel()
+    
+    private let inputTextField: UITextField = UITextField()
+    
     
     // MARK: - Properties
     
@@ -39,7 +43,7 @@ final class OnBoardingViewController: UIViewController {
 private extension OnBoardingViewController {
     
     func setHierarchy() {
-        self.view.addSubview(graphicImageView)
+        self.view.addSubviews(graphicImageView, noticeLabel, inputTextField)
     }
     
     func setLayout() {
@@ -47,6 +51,17 @@ private extension OnBoardingViewController {
             $0.horizontalEdges.equalToSuperview().inset(16)
             $0.height.equalTo((screenWidth - 32) * (385 / 343))
             $0.top.equalToSuperview().inset(statusBarHeight + 9)
+        }
+        
+        noticeLabel.snp.makeConstraints {
+            $0.top.equalTo(graphicImageView.snp.bottom).offset(32)
+            $0.horizontalEdges.equalToSuperview().inset(16)
+        }
+        
+        inputTextField.snp.makeConstraints {
+            $0.top.equalTo(noticeLabel.snp.bottom).offset(16)
+            $0.horizontalEdges.equalToSuperview().inset(16)
+            $0.height.equalTo(56)
         }
         
     }
@@ -58,6 +73,19 @@ private extension OnBoardingViewController {
             $0.image = UIImage(resource: .dummy8)
             $0.clipsToBounds = true
             $0.layer.cornerRadius = 12
+        }
+        
+        noticeLabel.do {
+            $0.numberOfLines = 0
+            $0.attributedText = UILabel.attributedText(for: .title1, withText: "나의 삶의 균형을 위한\n최종 목표를 설정해주세요.")
+            $0.textColor = UIColor(resource: .black000)
+        }
+        
+        inputTextField.do {
+            $0.setPlaceholder(placeholder: "어쩌구", font: UIFont.pretendard(.title1), fontColor: UIColor(resource: .gray700))
+            $0.addPadding(left: 24)
+            $0.layer.cornerRadius = 12
+            $0.backgroundColor = UIColor(resource: .gray200)
         }
     }
     

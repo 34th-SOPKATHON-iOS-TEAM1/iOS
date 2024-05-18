@@ -9,7 +9,7 @@ import UIKit
 
 extension UILabel {
     
-    static func attributedText(for fontName: FontName, withText text: String)  {
+    static func attributedText(for fontName: FontName, withText text: String) -> NSAttributedString  {
         let spacing: CGFloat
         
         switch fontName {
@@ -35,6 +35,8 @@ extension UILabel {
             value: style,
             range: NSRange(location: 0, length: attributedStr.length)
         )
+        
+        return attributedStr
     }
 }
 
