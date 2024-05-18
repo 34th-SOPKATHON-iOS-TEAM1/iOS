@@ -35,7 +35,7 @@ class ConfirmationAlertViewController: UIViewController {
          sheetPresentationController.preferredCornerRadius = 15
          sheetPresentationController.prefersGrabberVisible = false
          sheetPresentationController.detents = [.custom {context in
-            return UIScreen.main.bounds.height * 0.6}]
+            return UIScreen.main.bounds.height * 0.62}]
       }
       view.addSubview(container)
    }

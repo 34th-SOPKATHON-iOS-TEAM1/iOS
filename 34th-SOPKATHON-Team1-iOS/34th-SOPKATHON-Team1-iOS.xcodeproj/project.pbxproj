@@ -34,7 +34,6 @@
 		CA2CBE412BF8E42400049F8F /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA2CBE402BF8E42400049F8F /* Pretendard-Light.otf */; };
 		CA2CBE432BF8F60D00049F8F /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE422BF8F60D00049F8F /* UILabel+.swift */; };
 		CA2CBE4C2BF90E6D00049F8F /* CheckToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE4B2BF90E6D00049F8F /* CheckToDoViewController.swift */; };
-		CA2CBE4E2BF90E7A00049F8F /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE4D2BF90E7A00049F8F /* SuccessViewController.swift */; };
 		CA2CBE522BF90EB400049F8F /* RegisterToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE512BF90EB400049F8F /* RegisterToDoViewController.swift */; };
 		CA2CBE542BF90EC300049F8F /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE532BF90EC300049F8F /* SplashViewController.swift */; };
 		CA2CBE562BF90EDA00049F8F /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE552BF90EDA00049F8F /* OnBoardingViewController.swift */; };
@@ -64,7 +63,6 @@
 		CA2CBE402BF8E42400049F8F /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
 		CA2CBE422BF8F60D00049F8F /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		CA2CBE4B2BF90E6D00049F8F /* CheckToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckToDoViewController.swift; sourceTree = "<group>"; };
-		CA2CBE4D2BF90E7A00049F8F /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
 		CA2CBE512BF90EB400049F8F /* RegisterToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterToDoViewController.swift; sourceTree = "<group>"; };
 		CA2CBE532BF90EC300049F8F /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		CA2CBE552BF90EDA00049F8F /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
@@ -221,7 +219,6 @@
 		CA2CBE492BF90E1500049F8F /* Success */ = {
 			isa = PBXGroup;
 			children = (
-				CA2CBE4D2BF90E7A00049F8F /* SuccessViewController.swift */,
 			);
 			path = Success;
 			sourceTree = "<group>";
@@ -339,7 +336,6 @@
 				D0C0C0FE2BF8ED38005A7D5C /* UITextField+.swift in Sources */,
 				CA2CBE562BF90EDA00049F8F /* OnBoardingViewController.swift in Sources */,
 				CA2CBE292BF8DF5600049F8F /* UICollectionViewCell+.swift in Sources */,
-				CA2CBE4E2BF90E7A00049F8F /* SuccessViewController.swift in Sources */,
 				CA2CBE042BF8DD3A00049F8F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
