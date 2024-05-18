@@ -31,6 +31,7 @@
 		CA2CBE3D2BF8E35A00049F8F /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA2CBE3C2BF8E35A00049F8F /* Pretendard-ExtraBold.otf */; };
 		CA2CBE3F2BF8E3D400049F8F /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA2CBE3E2BF8E3D400049F8F /* Pretendard-ExtraLight.otf */; };
 		CA2CBE412BF8E42400049F8F /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA2CBE402BF8E42400049F8F /* Pretendard-Light.otf */; };
+		D0C0C0FE2BF8ED38005A7D5C /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C0C0FD2BF8ED38005A7D5C /* UITextField+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		CA2CBE3C2BF8E35A00049F8F /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
 		CA2CBE3E2BF8E3D400049F8F /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
 		CA2CBE402BF8E42400049F8F /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
+		D0C0C0FD2BF8ED38005A7D5C /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				CA2CBE2C2BF8DFDC00049F8F /* UIStackView+.swift */,
 				CA2CBE2E2BF8DFF400049F8F /* UITableViewCell+.swift */,
 				CA2CBE302BF8E00600049F8F /* UIView+.swift */,
+				D0C0C0FD2BF8ED38005A7D5C /* UITextField+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				CA2CBE022BF8DD3A00049F8F /* AppDelegate.swift in Sources */,
 				CA2CBE312BF8E00600049F8F /* UIView+.swift in Sources */,
 				CA2CBE2B2BF8DF9C00049F8F /* UIFont+.swift in Sources */,
+				D0C0C0FE2BF8ED38005A7D5C /* UITextField+.swift in Sources */,
 				CA2CBE292BF8DF5600049F8F /* UICollectionViewCell+.swift in Sources */,
 				CA2CBE042BF8DD3A00049F8F /* SceneDelegate.swift in Sources */,
 			);
