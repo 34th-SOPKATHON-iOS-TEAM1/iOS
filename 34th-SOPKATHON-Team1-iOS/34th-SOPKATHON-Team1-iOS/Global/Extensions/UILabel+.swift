@@ -13,11 +13,11 @@ extension UILabel {
         let spacing: CGFloat
         
         switch fontName {
-        case .heading1, .heading2:
+        case .heading1, .heading2, .heading3:
             spacing = 1
-        case .title1, .title2:
+        case .title2:
             spacing = 1.45 * fontName.size
-        case .body1, .detail1:
+        case .title1, .body1, .detail1:
             spacing = 1.4 * fontName.size
         }
         
