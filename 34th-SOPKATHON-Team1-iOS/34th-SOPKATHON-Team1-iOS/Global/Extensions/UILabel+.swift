@@ -9,16 +9,16 @@ import UIKit
 
 extension UILabel {
     
-    static func attributedText(for fontName: FontName, withText text: String)  {
+    static func attributedText(for fontName: FontName, withText text: String) -> NSAttributedString  {
         let spacing: CGFloat
         
         switch fontName {
         case .heading1, .heading2, .heading3:
             spacing = 1
         case .title2:
-            spacing = 1.45 * fontName.size
+            spacing = 1.45
         case .title1, .body1, .detail1:
-            spacing = 1.4 * fontName.size
+            spacing = 1.4
         }
         
         let font = UIFont.pretendard(fontName)
@@ -35,6 +35,8 @@ extension UILabel {
             value: style,
             range: NSRange(location: 0, length: attributedStr.length)
         )
+        
+        return attributedStr
     }
 }
 
