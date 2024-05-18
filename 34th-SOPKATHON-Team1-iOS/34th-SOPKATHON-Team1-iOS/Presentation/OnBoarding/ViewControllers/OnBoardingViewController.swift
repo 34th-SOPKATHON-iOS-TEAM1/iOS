@@ -17,6 +17,8 @@ final class OnBoardingViewController: UIViewController {
     
     private let inputTextField: UITextField = UITextField()
     
+    private let startButton: UIButton = UIButton()
+    
     
     // MARK: - Properties
     
@@ -43,7 +45,7 @@ final class OnBoardingViewController: UIViewController {
 private extension OnBoardingViewController {
     
     func setHierarchy() {
-        self.view.addSubviews(graphicImageView, noticeLabel, inputTextField)
+        self.view.addSubviews(graphicImageView, noticeLabel, inputTextField, startButton)
     }
     
     func setLayout() {
@@ -62,6 +64,12 @@ private extension OnBoardingViewController {
             $0.top.equalTo(noticeLabel.snp.bottom).offset(16)
             $0.horizontalEdges.equalToSuperview().inset(16)
             $0.height.equalTo(56)
+        }
+        
+        startButton.snp.makeConstraints {
+            $0.bottom.equalToSuperview().inset(56)
+            $0.horizontalEdges.equalToSuperview().inset(16)
+            $0.height.equalTo(64)
         }
         
     }
@@ -86,6 +94,13 @@ private extension OnBoardingViewController {
             $0.addPadding(left: 24)
             $0.layer.cornerRadius = 12
             $0.backgroundColor = UIColor(resource: .gray200)
+        }
+        
+        startButton.do {
+            $0.layer.cornerRadius = 30
+            $0.backgroundColor = UIColor(resource: .black000)
+            $0.setAttributedTitle(UILabel.attributedText(for: .heading2, withText: "서비스 시작하기"), for: .normal)
+            $0.setTitleColor(UIColor(resource: .white000), for: .normal)
         }
     }
     
