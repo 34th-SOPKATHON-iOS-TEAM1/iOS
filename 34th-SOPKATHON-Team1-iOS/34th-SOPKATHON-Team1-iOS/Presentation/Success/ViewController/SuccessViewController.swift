@@ -31,6 +31,8 @@ class SuccessViewController: UIViewController {
       setLayout()
    }
    
+   // MARK: setHierachy
+   
    func setHierachy() {
       container.addSubviews(
          cancelBtn,
@@ -48,6 +50,8 @@ class SuccessViewController: UIViewController {
       
       view.addSubview(container)
    }
+   
+   // MARK: setStyle
    
    func setStyle() {
       container.do {
@@ -81,6 +85,8 @@ class SuccessViewController: UIViewController {
       }
    }
    
+   // MARK: setLayout
+   
    func setLayout() {
       container.snp.makeConstraints {
          $0.top.equalToSuperview()
@@ -109,6 +115,8 @@ class SuccessViewController: UIViewController {
          $0.bottom.equalToSuperview().inset(32)
       }
    }
+   
+   // MARK: @objc func
    
    @objc func didTapCancelBtn() {
       self.dismiss(animated: true)
