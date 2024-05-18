@@ -25,6 +25,13 @@ final class RegisterNotToDoView: UIView {
     private let previousButton = UIButton()
     private let nextButton = UIButton()
     private let buttonStackView = UIStackView()
+    private let clearButton1 = UIButton()
+    private let clearButton2 = UIButton()
+    private let clearButton3 = UIButton()
+    private let todoTextField1 = UITextField()
+    private let todoTextField2 = UITextField()
+    private let todoTextField3 = UITextField()
+    private let textFieldStackView = UIStackView()
 
     // MARK: - Life Cycles
     
@@ -101,6 +108,70 @@ extension RegisterNotToDoView {
             $0.axis = .horizontal
             $0.spacing = 7
         }
+        
+        clearButton1.do {
+            $0.setImage(UIImage(resource: .icClear), for: .normal)
+            $0.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
+            $0.contentMode = .scaleAspectFit
+        }
+        
+        clearButton2.do {
+            $0.setImage(UIImage(resource: .icClear), for: .normal)
+            $0.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
+            $0.contentMode = .scaleAspectFit
+        }
+        
+        clearButton3.do {
+            $0.setImage(UIImage(resource: .icClear), for: .normal)
+            $0.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
+            $0.contentMode = .scaleAspectFit
+        }
+        
+        todoTextField1.do {
+            $0.setPlaceholder(placeholder: "목표를 입력하세요", font: .pretendard(.title1), fontColor: .gray700)
+            $0.setTextFont(font: .pretendard(.title1), fontColor: .black000)
+            $0.backgroundColor = .gray100
+            $0.layer.cornerRadius = 12
+            
+            let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 37, height: 24))
+            leftView.addSubview(clearButton1)
+            $0.leftViewMode = .always
+            $0.leftView = leftView
+            
+            let rightView = UIView(frame: CGRect(x: 0, y: 0, width: 37, height: 24))
+            rightView.addSubview(clearButton1)
+            $0.rightViewMode = .always
+            $0.rightView = rightView
+        }
+        
+        todoTextField2.do {
+            $0.setPlaceholder(placeholder: "목표를 입력하세요", font: .pretendard(.title1), fontColor: .gray700)
+            $0.setTextFont(font: .pretendard(.title1), fontColor: .black000)
+            $0.backgroundColor = .gray100
+            $0.layer.cornerRadius = 12
+            
+            let rightView = UIView(frame: CGRect(x: 0, y: 0, width: 37, height: 24))
+            rightView.addSubview(clearButton2)
+            $0.rightViewMode = .always
+            $0.rightView = rightView
+        }
+        
+        todoTextField3.do {
+            $0.setPlaceholder(placeholder: "목표를 입력하세요", font: .pretendard(.title1), fontColor: .gray700)
+            $0.setTextFont(font: .pretendard(.title1), fontColor: .black000)
+            $0.backgroundColor = .gray100
+            $0.layer.cornerRadius = 12
+            
+            let rightView = UIView(frame: CGRect(x: 0, y: 0, width: 37, height: 24))
+            rightView.addSubview(clearButton3)
+            $0.rightViewMode = .always
+            $0.rightView = rightView
+        }
+        
+        textFieldStackView.do {
+            $0.axis = .vertical
+            $0.spacing = 12
+        }
     }
     
     private func setupHierarchy() {
@@ -110,9 +181,15 @@ extension RegisterNotToDoView {
             stepLabel,
             titleLabel,
             discriptionLabel,
-            buttonStackView
+            buttonStackView,
+            textFieldStackView
         )
         buttonStackView.addArrangedSubviews(previousButton, nextButton)
+        textFieldStackView.addArrangedSubviews(
+            todoTextField1,
+            todoTextField2,
+            todoTextField3
+        )
     }
     
     private func setupLayout() {
@@ -142,19 +219,27 @@ extension RegisterNotToDoView {
             $0.top.equalTo(titleLabel.snp.bottom).offset(6)
         }
         
-        previousButton.snp.makeConstraints{
-            $0.height.equalTo(64)
-            $0.width.equalTo(168)
-        }
-        
-        nextButton.snp.makeConstraints{
-            $0.height.equalTo(64)
-            $0.width.equalTo(168)
+        for button in buttonStackView.arrangedSubviews {
+            button.snp.makeConstraints{
+                $0.height.equalTo(64)
+                $0.width.equalTo(168)
+            }
         }
         
         buttonStackView.snp.makeConstraints{
             $0.centerX.equalToSuperview()
             $0.bottom.equalToSuperview().inset(56)
+        }
+        
+        for textfield in textFieldStackView.arrangedSubviews {
+            textfield.snp.makeConstraints{
+                $0.height.equalTo(64)
+            }
+        }
+        
+        textFieldStackView.snp.makeConstraints {
+            $0.horizontalEdges.equalToSuperview().inset(16)
+            $0.top.equalTo(discriptionLabel.snp.bottom).offset(22)
         }
     }
     
