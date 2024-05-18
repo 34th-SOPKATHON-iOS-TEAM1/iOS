@@ -64,10 +64,10 @@ class ConfirmationAlertViewController: UIViewController {
       }
       
       goToSeeS0wBtn.do {
-         $0.backgroundColor = .black000
+         $0.backgroundColor = .mint400
          $0.layer.cornerRadius = 30
          $0.setTitle("내 시소 보러가기", for: .normal)
-         $0.titleLabel?.font = .pretendard(.heading2)
+         $0.titleLabel?.font = .pretendard(.heading3)
          $0.titleLabel?.textColor = .white000
          $0.titleLabel?.textAlignment = .center
          $0.addTarget(self, action: #selector(didTapgoToSeeS0wBtn), for: .touchUpInside)
