@@ -24,13 +24,7 @@ class CheckToDoViewController: UIViewController {
     private var collectionView: UICollectionView!
     
     var buttonStates = [String: Bool]()
-
-    let imageMapping: [String: Int] = [
-            "000000": 1, "000001": 2, "000010": 3, "000011": 4, "000100": 5, "000101": 6,
-            "000110": 7, "000111": 8, "001000": 9, "001001": 10, "001010": 11, "001011": 12,
-            // 사진 보고 매핑
-            "111100": 61, "111101": 62, "111110": 63, "111111": 64
-        ]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,14 +38,14 @@ class CheckToDoViewController: UIViewController {
     private func setUpProperty() {
         
         mainSeeSawImageView.do {
-            $0.image = UIImage(named: "dummy9")
+            $0.image = UIImage(named: "defaltSeesaw")
             $0.contentMode = .scaleAspectFill
             $0.layer.cornerRadius = 12
             $0.clipsToBounds = true
         }
         
         bottomRoundedView.do {
-            $0.backgroundColor = UIColor.gray200
+            $0.backgroundColor = UIColor.mint100
             $0.layer.cornerRadius = 12
             $0.clipsToBounds = true
         }
@@ -128,38 +122,86 @@ extension CheckToDoViewController :  UICollectionViewDelegate, UICollectionViewD
             cell.delegate = self
             return cell
         } else {
+            
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TodoCVC", for: indexPath) as! TodoCVC
             cell.delegate = self
             return cell
         }
     }
-
-
+    
 }
 
 extension CheckToDoViewController: TodoCellDelegate {
     
     func buttonStateChanged(buttonIdentifier: String, isPressed: Bool) {
-           buttonStates[buttonIdentifier] = isPressed
-           updateImageBasedOnState()
-       }
-       
-
-        private func updateImageBasedOnState() {
-            let key = getStateKey()
-            let imageIndex = imageMapping[key, default: 1]
-            mainSeeSawImageView.image = UIImage(named: "dummy\(imageIndex)")
+        buttonStates[buttonIdentifier] = isPressed
+        updateImageBasedOnState()
+    }
+    
+    private func updateImageBasedOnState() {
+        let todoCount = ["Todo1", "Todo2", "Todo3"].filter { buttonStates[$0, default: false] }.count
+        let notTodoCount = ["NotTodo1", "NotTodo2", "NotTodo3"].filter { buttonStates[$0, default: false] }.count
+        
+        var imageName = "defaltSeesaw"  // Initial default image
+        
+        switch (todoCount, notTodoCount ) {
+        case (0, 1): imageName = "unbalance01"
+        case (0, 2): imageName = "unbalance03"
+        case (0, 3): imageName = "unbalance07"
+        case (1, 0): imageName = "unbalance02"
+        case (1, 1): imageName = "balance1"
+        case (1, 2): imageName = "unbalance04"
+        case (1, 3): imageName = "unbalance09"
+        case (2, 0): imageName = "unbalance05"
+        case (2, 1): imageName = "unbalance06"
+        case (2, 2): imageName = "balance2"
+        case (2, 3): imageName = "unbalance08"
+        case (3, 0): imageName = "unbalance10"
+        case (3, 1): imageName = "unbalance11"
+        case (3, 2): imageName = "unbalance12"
+        case (3, 3): imageName = "balance3"
+        default: imageName = "defaltSeesaw"
         }
-
-        private func getStateKey() -> String {
-            let keys = ["Todo1", "Todo2", "Todo3", "NotTodo1", "NotTodo2", "NotTodo3"]
-            return keys.map { buttonStates[$0, default: false] ? "1" : "0" }.joined()
+        mainSeeSawImageView.image = UIImage(named: imageName)
+        
+        // Check if all buttons are pressed
+        if allButtonsArePressed() {
+            presentConfirmationAlert()
         }
-
+    }
+    
+    
+    private func allButtonsArePressed() -> Bool {
+        let keys = ["Todo1", "Todo2", "Todo3", "NotTodo1", "NotTodo2", "NotTodo3"]
+        return keys.allSatisfy { buttonStates[$0, default: false] }
+    }
+    
+    private func presentConfirmationAlert() {
+        DispatchQueue.main.async {
+            let blurView = UIView()
+            self.view.addSubview(blurView)
+            blurView.do {
+                $0.backgroundColor = .white
+                $0.alpha = 0.50
+                $0.frame = self.view.frame
+            }
+            
+            let alertVC = ConfirmationAlertViewController()
+            alertVC.modalPresentationStyle = .formSheet
+            self.present(alertVC, animated: true, completion: nil)
+        }
+    }
+    
+    
+    private func getStateKey() -> String {
+        let keys = ["Todo1", "Todo2", "Todo3", "NotTodo1", "NotTodo2", "NotTodo3"]
+        return keys.map { buttonStates[$0, default: false] ? "1" : "0" }.joined()
+    }
+    
+    
 }
 
-//
-//
-//#Preview {
-//    CheckToDoViewController()
-//}
+
+#Preview {
+    CheckToDoViewController()
+}
