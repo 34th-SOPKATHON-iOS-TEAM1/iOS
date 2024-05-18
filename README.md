@@ -81,8 +81,19 @@ ex ) feature/#이슈번호,  refactor/#이슈번호
 ```
 <br/>
 
+## 📸 시연영상
+|기능|스크린샷|
+|:--:|:--:|
+|아이폰15Pro|<img src = "" width ="250">|
+
+
+https://github.com/34th-SOPKATHON-iOS-TEAM1/iOS/assets/114901417/2f6b788f-7258-4f7e-a563-be9524471851
+
 
 
 ## 📸 아요네 사진~!
-
+### Before
 <img src = "https://github.com/34th-SOPKATHON-iOS-TEAM1/iOS/assets/105407130/83063b5f-3f1c-4935-bd5f-ba720b49658f" width = "700">
+
+### After
+<img src = "https://github.com/34th-SOPKATHON-iOS-TEAM1/iOS/assets/114901417/b3020ccc-7f07-424f-b878-09ea590ff2d5" width = "700">
