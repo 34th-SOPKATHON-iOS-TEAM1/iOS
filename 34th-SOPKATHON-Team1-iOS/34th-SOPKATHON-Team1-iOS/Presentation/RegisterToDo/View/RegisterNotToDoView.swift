@@ -110,21 +110,21 @@ extension RegisterNotToDoView {
         }
         
         clearButton1.do {
-            $0.setImage(UIImage(resource: .icClear), for: .normal)
+            $0.setImage(UIImage(resource: .cancel), for: .normal)
             $0.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
             $0.contentMode = .scaleAspectFit
             $0.isHidden = true
         }
         
         clearButton2.do {
-            $0.setImage(UIImage(resource: .icClear), for: .normal)
+            $0.setImage(UIImage(resource: .cancel), for: .normal)
             $0.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
             $0.contentMode = .scaleAspectFit
             $0.isHidden = true
         }
         
         clearButton3.do {
-            $0.setImage(UIImage(resource: .icClear), for: .normal)
+            $0.setImage(UIImage(resource: .cancel), for: .normal)
             $0.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
             $0.contentMode = .scaleAspectFit
             $0.isHidden = true
