@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		787FA8FF2BF915B1007E5610 /* NotTodoCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787FA8FE2BF915B1007E5610 /* NotTodoCVC.swift */; };
+		787FA9012BF915BD007E5610 /* TodoCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787FA9002BF915BD007E5610 /* TodoCVC.swift */; };
 		CA2CBE022BF8DD3A00049F8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE012BF8DD3A00049F8F /* AppDelegate.swift */; };
 		CA2CBE042BF8DD3A00049F8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE032BF8DD3A00049F8F /* SceneDelegate.swift */; };
 		CA2CBE062BF8DD3A00049F8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE052BF8DD3A00049F8F /* ViewController.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		787FA8FE2BF915B1007E5610 /* NotTodoCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotTodoCVC.swift; sourceTree = "<group>"; };
+		787FA9002BF915BD007E5610 /* TodoCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCVC.swift; sourceTree = "<group>"; };
 		CA2CBDFE2BF8DD3A00049F8F /* 34th-SOPKATHON-Team1-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "34th-SOPKATHON-Team1-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA2CBE012BF8DD3A00049F8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA2CBE032BF8DD3A00049F8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +93,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		787FA8FD2BF9158C007E5610 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				787FA8FE2BF915B1007E5610 /* NotTodoCVC.swift */,
+				787FA9002BF915BD007E5610 /* TodoCVC.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		CA2CBDF52BF8DD3A00049F8F = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +234,7 @@
 		CA2CBE4A2BF90E1D00049F8F /* CheckToDo */ = {
 			isa = PBXGroup;
 			children = (
+				787FA8FD2BF9158C007E5610 /* Cell */,
 				CA2CBE4B2BF90E6D00049F8F /* CheckToDoViewController.swift */,
 			);
 			path = CheckToDo;
@@ -321,6 +335,7 @@
 				CA2CBE2D2BF8DFDC00049F8F /* UIStackView+.swift in Sources */,
 				CA2CBE432BF8F60D00049F8F /* UILabel+.swift in Sources */,
 				CA2CBE4C2BF90E6D00049F8F /* CheckToDoViewController.swift in Sources */,
+				787FA9012BF915BD007E5610 /* TodoCVC.swift in Sources */,
 				CA2CBE522BF90EB400049F8F /* RegisterToDoViewController.swift in Sources */,
 				CA2CBE2F2BF8DFF400049F8F /* UITableViewCell+.swift in Sources */,
 				CA2CBE022BF8DD3A00049F8F /* AppDelegate.swift in Sources */,
@@ -329,6 +344,7 @@
 				CA2CBE542BF90EC300049F8F /* SplashViewController.swift in Sources */,
 				D0C0C0FE2BF8ED38005A7D5C /* UITextField+.swift in Sources */,
 				CA2CBE562BF90EDA00049F8F /* OnBoardingViewController.swift in Sources */,
+				787FA8FF2BF915B1007E5610 /* NotTodoCVC.swift in Sources */,
 				CA2CBE292BF8DF5600049F8F /* UICollectionViewCell+.swift in Sources */,
 				CA2CBE4E2BF90E7A00049F8F /* SuccessViewController.swift in Sources */,
 				CA2CBE502BF90E9600049F8F /* AlertViewController.swift in Sources */,
