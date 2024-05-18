@@ -15,6 +15,11 @@
 		9E3FBA422BF94A480085B6F1 /* MoyaLoggingPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3FBA412BF94A480085B6F1 /* MoyaLoggingPlugin.swift */; };
 		9E3FBA442BF94A710085B6F1 /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3FBA432BF94A710085B6F1 /* BaseTargetType.swift */; };
 		9E3FBA482BF94BAB0085B6F1 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3FBA472BF94BAB0085B6F1 /* Config.swift */; };
+		9E3FBA4B2BF94FA40085B6F1 /* GetAllResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3FBA4A2BF94FA40085B6F1 /* GetAllResponseDTO.swift */; };
+		9E3FBA4D2BF950630085B6F1 /* BasicResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3FBA4C2BF950630085B6F1 /* BasicResponseDTO.swift */; };
+		9E3FBA502BF951E10085B6F1 /* PostGoalRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3FBA4F2BF951E10085B6F1 /* PostGoalRequestBody.swift */; };
+		9E3FBA522BF9526C0085B6F1 /* PostNotTodoRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3FBA512BF9526C0085B6F1 /* PostNotTodoRequestBody.swift */; };
+		9E3FBA542BF952ED0085B6F1 /* PostTodoRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3FBA532BF952ED0085B6F1 /* PostTodoRequestBody.swift */; };
 		CA0C2CBC2BF931F70026C6C7 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0C2CBB2BF931F70026C6C7 /* OnBoardingView.swift */; };
 		CA0C2CBE2BF933CE0026C6C7 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA0C2CBD2BF933CE0026C6C7 /* Montserrat-Bold.otf */; };
 		CA0C2CC12BF9478E0026C6C7 /* lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = CA0C2CC02BF9478E0026C6C7 /* lottie.json */; };
@@ -64,6 +69,11 @@
 		9E3FBA432BF94A710085B6F1 /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
 		9E3FBA452BF94AEB0085B6F1 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		9E3FBA472BF94BAB0085B6F1 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		9E3FBA4A2BF94FA40085B6F1 /* GetAllResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllResponseDTO.swift; sourceTree = "<group>"; };
+		9E3FBA4C2BF950630085B6F1 /* BasicResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicResponseDTO.swift; sourceTree = "<group>"; };
+		9E3FBA4F2BF951E10085B6F1 /* PostGoalRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGoalRequestBody.swift; sourceTree = "<group>"; };
+		9E3FBA512BF9526C0085B6F1 /* PostNotTodoRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNotTodoRequestBody.swift; sourceTree = "<group>"; };
+		9E3FBA532BF952ED0085B6F1 /* PostTodoRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTodoRequestBody.swift; sourceTree = "<group>"; };
 		CA0C2CBB2BF931F70026C6C7 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		CA0C2CBD2BF933CE0026C6C7 /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
 		CA0C2CC02BF9478E0026C6C7 /* lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottie.json; sourceTree = "<group>"; };
@@ -152,6 +162,8 @@
 		9E3FBA3D2BF949E50085B6F1 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				9E3FBA4E2BF951C80085B6F1 /* RequestDTO */,
+				9E3FBA492BF94F7D0085B6F1 /* ResponseDTO */,
 				9E3FBA3E2BF94A280085B6F1 /* Base */,
 			);
 			path = Network;
@@ -174,6 +186,25 @@
 				9E3FBA472BF94BAB0085B6F1 /* Config.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		9E3FBA492BF94F7D0085B6F1 /* ResponseDTO */ = {
+			isa = PBXGroup;
+			children = (
+				9E3FBA4A2BF94FA40085B6F1 /* GetAllResponseDTO.swift */,
+				9E3FBA4C2BF950630085B6F1 /* BasicResponseDTO.swift */,
+			);
+			path = ResponseDTO;
+			sourceTree = "<group>";
+		};
+		9E3FBA4E2BF951C80085B6F1 /* RequestDTO */ = {
+			isa = PBXGroup;
+			children = (
+				9E3FBA4F2BF951E10085B6F1 /* PostGoalRequestBody.swift */,
+				9E3FBA512BF9526C0085B6F1 /* PostNotTodoRequestBody.swift */,
+				9E3FBA532BF952ED0085B6F1 /* PostTodoRequestBody.swift */,
+			);
+			path = RequestDTO;
 			sourceTree = "<group>";
 		};
 		CA0C2CBA2BF931EF0026C6C7 /* Views */ = {
@@ -462,12 +493,16 @@
 				CA2CBE062BF8DD3A00049F8F /* ViewController.swift in Sources */,
 				CA2CBE2D2BF8DFDC00049F8F /* UIStackView+.swift in Sources */,
 				D014574B2BF9213300A6E0AF /* RegisterToDoViewController.swift in Sources */,
+				9E3FBA4D2BF950630085B6F1 /* BasicResponseDTO.swift in Sources */,
 				CA2CBE432BF8F60D00049F8F /* UILabel+.swift in Sources */,
+				9E3FBA4B2BF94FA40085B6F1 /* GetAllResponseDTO.swift in Sources */,
 				D014574E2BF9215800A6E0AF /* RegisterToDoView.swift in Sources */,
 				9E3FBA422BF94A480085B6F1 /* MoyaLoggingPlugin.swift in Sources */,
 				D01457502BF921A900A6E0AF /* RegisterNotToDoViewController.swift in Sources */,
 				CA2CBE4C2BF90E6D00049F8F /* CheckToDoViewController.swift in Sources */,
 				9E3FBA402BF94A370085B6F1 /* NetworkResult.swift in Sources */,
+				9E3FBA502BF951E10085B6F1 /* PostGoalRequestBody.swift in Sources */,
+				9E3FBA542BF952ED0085B6F1 /* PostTodoRequestBody.swift in Sources */,
 				787FA9012BF915BD007E5610 /* TodoCVC.swift in Sources */,
 				CA2CBE2F2BF8DFF400049F8F /* UITableViewCell+.swift in Sources */,
 				CA2CBE022BF8DD3A00049F8F /* AppDelegate.swift in Sources */,
@@ -475,6 +510,7 @@
 				CA2CBE2B2BF8DF9C00049F8F /* UIFont+.swift in Sources */,
 				D01457522BF921C300A6E0AF /* RegisterNotToDoView.swift in Sources */,
 				9E3FBA3C2BF93BFE0085B6F1 /* SuccessViewController.swift in Sources */,
+				9E3FBA522BF9526C0085B6F1 /* PostNotTodoRequestBody.swift in Sources */,
 				D0C0C0FE2BF8ED38005A7D5C /* UITextField+.swift in Sources */,
 				9E3FBA482BF94BAB0085B6F1 /* Config.swift in Sources */,
 				787FA8FF2BF915B1007E5610 /* NotTodoCVC.swift in Sources */,
