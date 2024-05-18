@@ -63,6 +63,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		781351702BF96A12003D1730 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		787FA8FE2BF915B1007E5610 /* NotTodoCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotTodoCVC.swift; sourceTree = "<group>"; };
 		787FA9002BF915BD007E5610 /* TodoCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCVC.swift; sourceTree = "<group>"; };
 		9E3FBA342BF914110085B6F1 /* ConfirmationAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationAlertViewController.swift; sourceTree = "<group>"; };
@@ -81,7 +82,6 @@
 		CA0C2CBD2BF933CE0026C6C7 /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
 		CA0C2CC02BF9478E0026C6C7 /* lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottie.json; sourceTree = "<group>"; };
 		CA0C2CC62BF95CC90026C6C7 /* OnBoardingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingService.swift; sourceTree = "<group>"; };
-		CA0C2CC92BF95F140026C6C7 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		CA0C2CCB2BF965C40026C6C7 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
 		CA2CBDFE2BF8DD3A00049F8F /* 34th-SOPKATHON-Team1-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "34th-SOPKATHON-Team1-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA2CBE012BF8DD3A00049F8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -184,7 +184,7 @@
 				9E3FBA3F2BF94A370085B6F1 /* NetworkResult.swift */,
 				9E3FBA412BF94A480085B6F1 /* MoyaLoggingPlugin.swift */,
 				9E3FBA432BF94A710085B6F1 /* BaseTargetType.swift */,
-				CA0C2CC92BF95F140026C6C7 /* Config.xcconfig */,
+				781351702BF96A12003D1730 /* Config.xcconfig */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -574,7 +574,7 @@
 /* Begin XCBuildConfiguration section */
 		CA2CBE102BF8DD3C00049F8F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CA0C2CC92BF95F140026C6C7 /* Config.xcconfig */;
+			baseConfigurationReference = 781351702BF96A12003D1730 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -638,7 +638,7 @@
 		};
 		CA2CBE112BF8DD3C00049F8F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CA0C2CC92BF95F140026C6C7 /* Config.xcconfig */;
+			baseConfigurationReference = 781351702BF96A12003D1730 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -695,7 +695,7 @@
 		};
 		CA2CBE132BF8DD3C00049F8F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CA0C2CC92BF95F140026C6C7 /* Config.xcconfig */;
+			baseConfigurationReference = 781351702BF96A12003D1730 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -723,7 +723,7 @@
 		};
 		CA2CBE142BF8DD3C00049F8F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CA0C2CC92BF95F140026C6C7 /* Config.xcconfig */;
+			baseConfigurationReference = 781351702BF96A12003D1730 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

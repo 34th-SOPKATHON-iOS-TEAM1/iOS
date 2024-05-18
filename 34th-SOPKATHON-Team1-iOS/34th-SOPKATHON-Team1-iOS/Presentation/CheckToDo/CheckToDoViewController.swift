@@ -25,6 +25,17 @@ class CheckToDoViewController: UIViewController {
     
     var buttonStates = [String: Bool]()
     
+    private var todoData: [String] = ["","",""] {
+        didSet {
+            self.collectionView.reloadData()
+        }
+    }
+    
+    private var notTodoData: [String] = ["","",""] {
+        didSet {
+            self.collectionView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +44,7 @@ class CheckToDoViewController: UIViewController {
         setupLayout()
         setupCollectionView()
         setUpProperty()
+        getAll()
     }
     
     private func setUpProperty() {
@@ -105,6 +117,23 @@ class CheckToDoViewController: UIViewController {
         }
     }
     
+    func getAll() {
+        
+        CheckService.shared.getCheckTodoNotTodoList { response in
+            switch response {
+            case .success(let data):
+                guard let data = data as? GetAllResponseDTO else { return }
+                
+                self.centerLabel.text = data.data.goal
+                self.notTodoData = data.data.notTodoContent
+                self.todoData = data.data.todoContent
+                self.collectionView.reloadData()
+                
+            default:
+                return
+            }
+        }
+    }
     
 }
 
@@ -120,11 +149,13 @@ extension CheckToDoViewController :  UICollectionViewDelegate, UICollectionViewD
         if indexPath.item == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NotTodoCVC", for: indexPath) as! NotTodoCVC
             cell.delegate = self
+            cell.bind(data: notTodoData)
             return cell
         } else {
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TodoCVC", for: indexPath) as! TodoCVC
             cell.delegate = self
+            cell.bind(data: todoData)
             return cell
         }
     }
@@ -202,6 +233,6 @@ extension CheckToDoViewController: TodoCellDelegate {
 }
 
 
-#Preview {
-    CheckToDoViewController()
-}
+//#Preview {
+//    CheckToDoViewController()
+//}

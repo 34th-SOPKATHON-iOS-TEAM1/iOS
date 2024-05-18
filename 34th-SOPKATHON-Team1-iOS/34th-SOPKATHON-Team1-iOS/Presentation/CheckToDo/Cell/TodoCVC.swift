@@ -18,9 +18,9 @@ class TodoCVC: UICollectionViewCell {
     private let firstRowView = UIView()
     private let secondRowView = UIView()
     private let thirdRowView = UIView()
-    private let firstLabel = UILabel()
-    private let secondLabel = UILabel()
-    private let thirdLabel = UILabel()
+    let firstLabel = UILabel()
+    let secondLabel = UILabel()
+    let thirdLabel = UILabel()
     private let firstButton = UIButton()
     private let secondButton = UIButton()
     private let thirdButton = UIButton()
@@ -92,6 +92,13 @@ class TodoCVC: UICollectionViewCell {
         setupButton(firstButton)
         setupButton(secondButton)
         setupButton(thirdButton)
+    }
+    
+    func bind(data: [String]) {
+        self.firstLabel.text = data[0]
+        self.secondLabel.text = data[1]
+        self.thirdLabel.text = data[2]
+
     }
     
     private func setupButton(_ button: UIButton) {
