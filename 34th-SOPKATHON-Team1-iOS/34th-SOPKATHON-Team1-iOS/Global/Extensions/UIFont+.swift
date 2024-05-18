@@ -8,15 +8,45 @@
 import UIKit
 
 enum FontName {
-    case head1, head3
-    case head4, head5, head6, head7, body1, body6, subTitle1, subTitle2, caption2, ad1
-    case body2
-    case body4, number3, body7, body8, caption1
+    case heading1
+    case heading2, title1, title2
+    case body1
+    case detail1
+    
+    var rawValue: String {
+            switch self {
+            case .heading1:
+                return "Pretendard-Bold"
+            case .heading2, .title1, .title2:
+                return "Pretendard-SemiBold"
+            case .detail1:
+                return "Pretendard-Medium"
+            case .body1:
+                return "Pretendard-Regular"
+            }
+        }
+        
+        var size: CGFloat {
+            switch self {
+            case .heading1:
+                return 24
+            case .heading2:
+                return 20
+            case .title1:
+                return 18
+            case .title2:
+                return 14
+            case .body1:
+                return 12
+            case .detail1:
+                return 10
+            }
+        }
 }
 
 extension UIFont {
-//    
-//    static func pretendard(_ style: FontName) -> UIFont {
-//        return UIFont(name: style.rawValue, size: style.size)!
-//    }
+    
+    static func pretendard(_ style: FontName) -> UIFont {
+        return UIFont(name: style.rawValue, size: style.size)!
+    }
 }
