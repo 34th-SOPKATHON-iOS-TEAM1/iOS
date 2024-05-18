@@ -36,6 +36,24 @@ extension RegisterToDoViewController {
     }
 
     private func setupDelegate() {
+        rootView.setupTextFieldDelegate(self)
+    }
+}
+
+extension RegisterToDoViewController: UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.layer.borderColor = UIColor.red.cgColor
+        textField.layer.borderWidth = 2
+        textField.backgroundColor = .lightGray
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+        textField.layer.borderWidth = 0
+        textField.backgroundColor = .gray100
+    }
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
         
     }
 }
