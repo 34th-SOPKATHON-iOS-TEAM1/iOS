@@ -118,7 +118,7 @@ private extension OnBoardingView {
         self.backgroundColor = UIColor(resource: .white000)
         
         graphicImageView.do {
-            $0.image = UIImage(resource: .dummy8)
+           $0.image = UIImage(resource: .onboarding)
             $0.clipsToBounds = true
             $0.layer.cornerRadius = 12
         }

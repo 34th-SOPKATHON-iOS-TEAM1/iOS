@@ -13,15 +13,15 @@ class SuccessViewController: UIViewController {
    
    // MARK: - UI Components
    
-   let container = UIView()
+   private let container = UIView()
    
-   let sees0ImageView = UIImageView()
+   private let sees0ImageView = UIImageView()
    
-   let titleLabel = UILabel()
+   private let titleLabel = UILabel()
    
-   let cancelBtn = UIButton()
+   private let cancelBtn = UIButton()
    
-   let subTitleLabel = UILabel()
+   private let subTitleLabel = UILabel()
    
    override func viewDidLoad() {
       super.viewDidLoad()
@@ -31,7 +31,9 @@ class SuccessViewController: UIViewController {
       setLayout()
    }
    
-   func setHierachy() {
+   // MARK: setHierachy
+   
+   private func setHierachy() {
       container.addSubviews(
          cancelBtn,
          sees0ImageView,
@@ -49,7 +51,9 @@ class SuccessViewController: UIViewController {
       view.addSubview(container)
    }
    
-   func setStyle() {
+   // MARK: setStyle
+   
+   private func setStyle() {
       container.do {
          $0.layer.cornerRadius = 12
          $0.layer.borderColor = UIColor.red.cgColor
@@ -57,13 +61,13 @@ class SuccessViewController: UIViewController {
       }
       
       sees0ImageView.do {
-         $0.image = UIImage(resource: .dummy10)
+         $0.image = UIImage(resource: .successModal)
          $0.layer.borderWidth = 0
       }
       
       titleLabel.do {
          $0.text = "시소가 완벽한 균형을 잡았어!"
-         $0.font = .pretendard(.title1)
+         $0.font = .pretendard(.heading3)
          $0.textAlignment = .center
          $0.textColor = .black000
       }
@@ -81,7 +85,9 @@ class SuccessViewController: UIViewController {
       }
    }
    
-   func setLayout() {
+   // MARK: setLayout
+   
+   private func setLayout() {
       container.snp.makeConstraints {
          $0.top.equalToSuperview()
          $0.leading.trailing.equalToSuperview().inset(16)
@@ -109,6 +115,8 @@ class SuccessViewController: UIViewController {
          $0.bottom.equalToSuperview().inset(32)
       }
    }
+   
+   // MARK: @objc func
    
    @objc func didTapCancelBtn() {
       self.dismiss(animated: true)
