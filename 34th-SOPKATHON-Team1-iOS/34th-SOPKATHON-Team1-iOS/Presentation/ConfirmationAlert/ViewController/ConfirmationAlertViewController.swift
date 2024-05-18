@@ -29,6 +29,8 @@ class ConfirmationAlertViewController: UIViewController {
       setLayout()
    }
    
+   // MARK: setHierachy
+   
    func setHierachy() {
       container.addSubviews(cancelBtn, congratulationsLabel, goToSeeS0wBtn)
       if let sheetPresentationController = sheetPresentationController {
@@ -39,6 +41,8 @@ class ConfirmationAlertViewController: UIViewController {
       }
       view.addSubview(container)
    }
+   
+   // MARK: setStyle
    
    func setStyle() {
       container.do {
@@ -70,6 +74,8 @@ class ConfirmationAlertViewController: UIViewController {
       }
    }
    
+   // MARK: setLayout
+   
    func setLayout() {
       congratulationsLabel.snp.makeConstraints {
          $0.top.equalToSuperview().offset(64)
@@ -94,6 +100,8 @@ class ConfirmationAlertViewController: UIViewController {
          $0.width.equalTo(277)
       }
    }
+   
+   // MARK: @objc func
    
    @objc func didTapCancelBtn() {
       self.dismiss(animated: true)
