@@ -305,8 +305,22 @@ extension RegisterToDoView: UITextFieldDelegate {
 
         if text.isEmpty {
             textField.rightViewMode = .never
+            if textField == todoTextField1 {
+                indexImage1.image = .imgGray1
+            } else if textField == todoTextField2 {
+                indexImage2.image = .imgGray2
+            } else {
+                indexImage3.image = .imgGray3
+            }
         } else {
             textField.rightViewMode = .always
+            if textField == todoTextField1 {
+                indexImage1.image = .imgMint1
+            } else if textField == todoTextField2 {
+                indexImage2.image = .imgMint2
+            } else {
+                indexImage3.image = .imgMint3
+            }
         }
     }
 }
