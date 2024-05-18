@@ -10,6 +10,7 @@
 		787FA8FF2BF915B1007E5610 /* NotTodoCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787FA8FE2BF915B1007E5610 /* NotTodoCVC.swift */; };
 		787FA9012BF915BD007E5610 /* TodoCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787FA9002BF915BD007E5610 /* TodoCVC.swift */; };
 		9E3FBA352BF914110085B6F1 /* ConfirmationAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3FBA342BF914110085B6F1 /* ConfirmationAlertViewController.swift */; };
+		9E3FBA3C2BF93BFE0085B6F1 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3FBA3B2BF93BFE0085B6F1 /* SuccessViewController.swift */; };
 		CA0C2CBC2BF931F70026C6C7 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0C2CBB2BF931F70026C6C7 /* OnBoardingView.swift */; };
 		CA0C2CBE2BF933CE0026C6C7 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA0C2CBD2BF933CE0026C6C7 /* Montserrat-Bold.otf */; };
 		CA2CBE022BF8DD3A00049F8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE012BF8DD3A00049F8F /* AppDelegate.swift */; };
@@ -38,9 +39,6 @@
 		CA2CBE412BF8E42400049F8F /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA2CBE402BF8E42400049F8F /* Pretendard-Light.otf */; };
 		CA2CBE432BF8F60D00049F8F /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE422BF8F60D00049F8F /* UILabel+.swift */; };
 		CA2CBE4C2BF90E6D00049F8F /* CheckToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE4B2BF90E6D00049F8F /* CheckToDoViewController.swift */; };
-		CA2CBE522BF90EB400049F8F /* RegisterToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE512BF90EB400049F8F /* RegisterToDoViewController.swift */; };
-		CA2CBE542BF90EC300049F8F /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE532BF90EC300049F8F /* SplashViewController.swift */; };
-		CA2CBE562BF90EDA00049F8F /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE552BF90EDA00049F8F /* OnBoardingViewController.swift */; };
 		CA2CBE592BF910E800049F8F /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE582BF910E800049F8F /* OnBoardingViewController.swift */; };
 		CA2CBE5C2BF915AF00049F8F /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE5B2BF915AF00049F8F /* SplashViewController.swift */; };
 		D014574B2BF9213300A6E0AF /* RegisterToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D014574A2BF9213300A6E0AF /* RegisterToDoViewController.swift */; };
@@ -54,6 +52,7 @@
 		787FA8FE2BF915B1007E5610 /* NotTodoCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotTodoCVC.swift; sourceTree = "<group>"; };
 		787FA9002BF915BD007E5610 /* TodoCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCVC.swift; sourceTree = "<group>"; };
 		9E3FBA342BF914110085B6F1 /* ConfirmationAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationAlertViewController.swift; sourceTree = "<group>"; };
+		9E3FBA3B2BF93BFE0085B6F1 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
 		CA0C2CBB2BF931F70026C6C7 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		CA0C2CBD2BF933CE0026C6C7 /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
 		CA2CBDFE2BF8DD3A00049F8F /* 34th-SOPKATHON-Team1-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "34th-SOPKATHON-Team1-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,9 +82,6 @@
 		D014574D2BF9215800A6E0AF /* RegisterToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterToDoView.swift; sourceTree = "<group>"; };
 		D014574F2BF921A900A6E0AF /* RegisterNotToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNotToDoViewController.swift; sourceTree = "<group>"; };
 		D01457512BF921C300A6E0AF /* RegisterNotToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNotToDoView.swift; sourceTree = "<group>"; };
-		CA2CBE512BF90EB400049F8F /* RegisterToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterToDoViewController.swift; sourceTree = "<group>"; };
-		CA2CBE532BF90EC300049F8F /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		CA2CBE552BF90EDA00049F8F /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		D0C0C0FD2BF8ED38005A7D5C /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,14 +110,6 @@
 				787FA9002BF915BD007E5610 /* TodoCVC.swift */,
 			);
 			path = Cell;
-      sourceTree = "<group>";
-		};
-		CA0C2CBA2BF931EF0026C6C7 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				CA0C2CBB2BF931F70026C6C7 /* OnBoardingView.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		9E3FBA332BF913E50085B6F1 /* ViewController */ = {
@@ -130,6 +118,30 @@
 				9E3FBA342BF914110085B6F1 /* ConfirmationAlertViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		9E3FBA392BF93BDD0085B6F1 /* Success */ = {
+			isa = PBXGroup;
+			children = (
+				9E3FBA3A2BF93BE90085B6F1 /* ViewController */,
+			);
+			path = Success;
+			sourceTree = "<group>";
+		};
+		9E3FBA3A2BF93BE90085B6F1 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9E3FBA3B2BF93BFE0085B6F1 /* SuccessViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CA0C2CBA2BF931EF0026C6C7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CA0C2CBB2BF931F70026C6C7 /* OnBoardingView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		CA2CBDF52BF8DD3A00049F8F = {
@@ -212,8 +224,8 @@
 		CA2CBE442BF90DC700049F8F /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				9E3FBA392BF93BDD0085B6F1 /* Success */,
 				CA2CBE4A2BF90E1D00049F8F /* CheckToDo */,
-				CA2CBE492BF90E1500049F8F /* Success */,
 				CA2CBE482BF90E0100049F8F /* ConfirmationAlert */,
 				CA2CBE472BF90DEC00049F8F /* RegisterToDo */,
 				CA2CBE462BF90DE000049F8F /* Splash */,
@@ -254,13 +266,6 @@
 				9E3FBA332BF913E50085B6F1 /* ViewController */,
 			);
 			path = ConfirmationAlert;
-			sourceTree = "<group>";
-		};
-		CA2CBE492BF90E1500049F8F /* Success */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Success;
 			sourceTree = "<group>";
 		};
 		CA2CBE4A2BF90E1D00049F8F /* CheckToDo */ = {
@@ -412,6 +417,7 @@
 				CA2CBE312BF8E00600049F8F /* UIView+.swift in Sources */,
 				CA2CBE2B2BF8DF9C00049F8F /* UIFont+.swift in Sources */,
 				D01457522BF921C300A6E0AF /* RegisterNotToDoView.swift in Sources */,
+				9E3FBA3C2BF93BFE0085B6F1 /* SuccessViewController.swift in Sources */,
 				D0C0C0FE2BF8ED38005A7D5C /* UITextField+.swift in Sources */,
 				787FA8FF2BF915B1007E5610 /* NotTodoCVC.swift in Sources */,
 				CA0C2CBC2BF931F70026C6C7 /* OnBoardingView.swift in Sources */,
