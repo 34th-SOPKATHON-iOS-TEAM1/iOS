@@ -7,15 +7,16 @@
 
 import UIKit
 
+import Lottie
 import SnapKit
 import Then
 
 final class SplashViewController: UIViewController {
     
     // MARK: - UI Properties
-    
-    private let graphicImageView: UIImageView = UIImageView()
-    
+        
+    private let lottieView = LottieAnimationView()
+
     
     // MARK: - Properties
     
@@ -40,11 +41,11 @@ final class SplashViewController: UIViewController {
 private extension SplashViewController {
     
     func setHierarchy() {
-        self.view.addSubview(graphicImageView)
+        self.view.addSubview(lottieView)
     }
     
     func setLayout() {
-        graphicImageView.snp.makeConstraints {
+        lottieView.snp.makeConstraints {
             $0.horizontalEdges.equalToSuperview().inset(16)
             $0.height.equalTo(screenWidth - 32)
             $0.centerY.equalToSuperview()
@@ -53,23 +54,21 @@ private extension SplashViewController {
     }
     
     func setStyle() {
-        self.view.backgroundColor = UIColor(resource: .black000)
-        
-        graphicImageView.do {
-            $0.image = UIImage(resource: .dummy8)
-            $0.clipsToBounds = true
-            $0.layer.cornerRadius = 12
-        }
+        self.view.backgroundColor = UIColor(resource: .white000)
     }
     
     func setSplash() {
-        UIView.animate(withDuration: 2.0,
-                       animations: {
-            self.view.alpha = 0.0
-        },
-                       completion: { finish in
-            let onBoardingVC = OnBoardingViewController()
-            self.navigationController?.pushViewController(onBoardingVC, animated: false)
-        })
+        lottieView.do {
+            $0.contentMode = .center
+            $0.animation = .named("lottie")
+            $0.loopMode = .playOnce
+            $0.play(completion: {completed in
+                if completed {
+                    let onboardingVC = OnBoardingViewController()
+                    self.navigationController?.pushViewController(onboardingVC, animated: true)
+                }
+            })
+        }
     }
+    
 }
