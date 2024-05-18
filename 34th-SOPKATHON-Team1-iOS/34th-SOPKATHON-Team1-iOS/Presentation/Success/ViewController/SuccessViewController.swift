@@ -67,7 +67,7 @@ class SuccessViewController: UIViewController {
       
       titleLabel.do {
          $0.text = "시소가 완벽한 균형을 잡았어!"
-         $0.font = .pretendard(.body1)
+         $0.font = .pretendard(.heading3)
          $0.textAlignment = .center
          $0.textColor = .black000
       }
