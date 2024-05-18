@@ -35,9 +35,12 @@
 		CA2CBE4C2BF90E6D00049F8F /* CheckToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE4B2BF90E6D00049F8F /* CheckToDoViewController.swift */; };
 		CA2CBE4E2BF90E7A00049F8F /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE4D2BF90E7A00049F8F /* SuccessViewController.swift */; };
 		CA2CBE502BF90E9600049F8F /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE4F2BF90E9600049F8F /* AlertViewController.swift */; };
-		CA2CBE522BF90EB400049F8F /* RegisterToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE512BF90EB400049F8F /* RegisterToDoViewController.swift */; };
-		CA2CBE592BF910E800049F8F /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE582BF910E800049F8F /* OnBoardingViewController.swift */; };
+		D014574B2BF9213300A6E0AF /* RegisterToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D014574A2BF9213300A6E0AF /* RegisterToDoViewController.swift */; };
+		D014574E2BF9215800A6E0AF /* RegisterToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D014574D2BF9215800A6E0AF /* RegisterToDoView.swift */; };
+		D01457502BF921A900A6E0AF /* RegisterNotToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D014574F2BF921A900A6E0AF /* RegisterNotToDoViewController.swift */; };
+		D01457522BF921C300A6E0AF /* RegisterNotToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01457512BF921C300A6E0AF /* RegisterNotToDoView.swift */; };
 		CA2CBE5C2BF915AF00049F8F /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE5B2BF915AF00049F8F /* SplashViewController.swift */; };
+		CA2CBE592BF910E800049F8F /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE582BF910E800049F8F /* OnBoardingViewController.swift */; };
 		D0C0C0FE2BF8ED38005A7D5C /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C0C0FD2BF8ED38005A7D5C /* UITextField+.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,7 +68,10 @@
 		CA2CBE4B2BF90E6D00049F8F /* CheckToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckToDoViewController.swift; sourceTree = "<group>"; };
 		CA2CBE4D2BF90E7A00049F8F /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
 		CA2CBE4F2BF90E9600049F8F /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
-		CA2CBE512BF90EB400049F8F /* RegisterToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterToDoViewController.swift; sourceTree = "<group>"; };
+		D014574A2BF9213300A6E0AF /* RegisterToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterToDoViewController.swift; sourceTree = "<group>"; };
+		D014574D2BF9215800A6E0AF /* RegisterToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterToDoView.swift; sourceTree = "<group>"; };
+		D014574F2BF921A900A6E0AF /* RegisterNotToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNotToDoViewController.swift; sourceTree = "<group>"; };
+		D01457512BF921C300A6E0AF /* RegisterNotToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNotToDoView.swift; sourceTree = "<group>"; };
 		CA2CBE582BF910E800049F8F /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		CA2CBE5B2BF915AF00049F8F /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		D0C0C0FD2BF8ED38005A7D5C /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
@@ -197,7 +203,8 @@
 		CA2CBE472BF90DEC00049F8F /* RegisterToDo */ = {
 			isa = PBXGroup;
 			children = (
-				CA2CBE512BF90EB400049F8F /* RegisterToDoViewController.swift */,
+				D014574C2BF9214900A6E0AF /* View */,
+				D01457492BF9211B00A6E0AF /* ViewController */,
 			);
 			path = RegisterToDo;
 			sourceTree = "<group>";
@@ -240,6 +247,24 @@
 				CA2CBE5B2BF915AF00049F8F /* SplashViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D01457492BF9211B00A6E0AF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D014574A2BF9213300A6E0AF /* RegisterToDoViewController.swift */,
+				D014574F2BF921A900A6E0AF /* RegisterNotToDoViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		D014574C2BF9214900A6E0AF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D014574D2BF9215800A6E0AF /* RegisterToDoView.swift */,
+				D01457512BF921C300A6E0AF /* RegisterNotToDoView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,13 +360,16 @@
 			files = (
 				CA2CBE062BF8DD3A00049F8F /* ViewController.swift in Sources */,
 				CA2CBE2D2BF8DFDC00049F8F /* UIStackView+.swift in Sources */,
+				D014574B2BF9213300A6E0AF /* RegisterToDoViewController.swift in Sources */,
 				CA2CBE432BF8F60D00049F8F /* UILabel+.swift in Sources */,
+				D014574E2BF9215800A6E0AF /* RegisterToDoView.swift in Sources */,
+				D01457502BF921A900A6E0AF /* RegisterNotToDoViewController.swift in Sources */,
 				CA2CBE4C2BF90E6D00049F8F /* CheckToDoViewController.swift in Sources */,
-				CA2CBE522BF90EB400049F8F /* RegisterToDoViewController.swift in Sources */,
 				CA2CBE2F2BF8DFF400049F8F /* UITableViewCell+.swift in Sources */,
 				CA2CBE022BF8DD3A00049F8F /* AppDelegate.swift in Sources */,
 				CA2CBE312BF8E00600049F8F /* UIView+.swift in Sources */,
 				CA2CBE2B2BF8DF9C00049F8F /* UIFont+.swift in Sources */,
+				D01457522BF921C300A6E0AF /* RegisterNotToDoView.swift in Sources */,
 				D0C0C0FE2BF8ED38005A7D5C /* UITextField+.swift in Sources */,
 				CA2CBE592BF910E800049F8F /* OnBoardingViewController.swift in Sources */,
 				CA2CBE292BF8DF5600049F8F /* UICollectionViewCell+.swift in Sources */,
