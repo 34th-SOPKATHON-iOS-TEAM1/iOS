@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CA0C2CBC2BF931F70026C6C7 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0C2CBB2BF931F70026C6C7 /* OnBoardingView.swift */; };
+		CA0C2CBE2BF933CE0026C6C7 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA0C2CBD2BF933CE0026C6C7 /* Montserrat-Bold.otf */; };
 		CA2CBE022BF8DD3A00049F8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE012BF8DD3A00049F8F /* AppDelegate.swift */; };
 		CA2CBE042BF8DD3A00049F8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE032BF8DD3A00049F8F /* SceneDelegate.swift */; };
 		CA2CBE062BF8DD3A00049F8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE052BF8DD3A00049F8F /* ViewController.swift */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		CA0C2CBB2BF931F70026C6C7 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		CA0C2CBD2BF933CE0026C6C7 /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
 		CA2CBDFE2BF8DD3A00049F8F /* 34th-SOPKATHON-Team1-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "34th-SOPKATHON-Team1-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA2CBE012BF8DD3A00049F8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA2CBE032BF8DD3A00049F8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 		CA2CBE332BF8E2DF00049F8F /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				CA0C2CBD2BF933CE0026C6C7 /* Montserrat-Bold.otf */,
 				CA2CBE402BF8E42400049F8F /* Pretendard-Light.otf */,
 				CA2CBE3E2BF8E3D400049F8F /* Pretendard-ExtraLight.otf */,
 				CA2CBE3C2BF8E35A00049F8F /* Pretendard-ExtraBold.otf */,
@@ -355,6 +358,7 @@
 				CA2CBE3F2BF8E3D400049F8F /* Pretendard-ExtraLight.otf in Resources */,
 				CA2CBE3D2BF8E35A00049F8F /* Pretendard-ExtraBold.otf in Resources */,
 				CA2CBE382BF8E30600049F8F /* Pretendard-Bold.otf in Resources */,
+				CA0C2CBE2BF933CE0026C6C7 /* Montserrat-Bold.otf in Resources */,
 				CA2CBE3B2BF8E31300049F8F /* Pretendard-SemiBold.otf in Resources */,
 				CA2CBE372BF8E30600049F8F /* Pretendard-Regular.otf in Resources */,
 				CA2CBE0E2BF8DD3C00049F8F /* Base in Resources */,

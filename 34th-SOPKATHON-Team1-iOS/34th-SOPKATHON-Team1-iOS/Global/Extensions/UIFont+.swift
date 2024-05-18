@@ -16,7 +16,7 @@ enum FontName {
     var rawValue: String {
             switch self {
             case .heading1, .heading2:
-                return "Pretendard-Bold"
+                return "Montserrat-Bold"
             case .heading3, .title1, .title2:
                 return "Pretendard-SemiBold"
             case .detail1:
