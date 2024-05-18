@@ -54,17 +54,17 @@ class NotTodoCVC: UICollectionViewCell {
         }
         
         firstRowView.do {
-            $0.backgroundColor = UIColor.brown100
+            $0.backgroundColor = UIColor.gray100
             $0.layer.cornerRadius = 8
         }
         
         secondRowView.do {
-            $0.backgroundColor = UIColor.brown100
+            $0.backgroundColor = UIColor.gray100
             $0.layer.cornerRadius = 8
         }
         
         thirdRowView.do {
-            $0.backgroundColor = UIColor.brown100
+            $0.backgroundColor = UIColor.gray100
             $0.layer.cornerRadius = 8
         }
         
