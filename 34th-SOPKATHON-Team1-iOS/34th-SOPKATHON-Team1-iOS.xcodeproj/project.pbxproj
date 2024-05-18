@@ -20,6 +20,7 @@
 		9E3FBA502BF951E10085B6F1 /* PostGoalRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3FBA4F2BF951E10085B6F1 /* PostGoalRequestBody.swift */; };
 		9E3FBA522BF9526C0085B6F1 /* PostNotTodoRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3FBA512BF9526C0085B6F1 /* PostNotTodoRequestBody.swift */; };
 		9E3FBA542BF952ED0085B6F1 /* PostTodoRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3FBA532BF952ED0085B6F1 /* PostTodoRequestBody.swift */; };
+		9E3FBA5A2BF9669B0085B6F1 /* CheckService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3FBA592BF9669B0085B6F1 /* CheckService.swift */; };
 		CA0C2CBC2BF931F70026C6C7 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0C2CBB2BF931F70026C6C7 /* OnBoardingView.swift */; };
 		CA0C2CBE2BF933CE0026C6C7 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA0C2CBD2BF933CE0026C6C7 /* Montserrat-Bold.otf */; };
 		CA0C2CC12BF9478E0026C6C7 /* lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = CA0C2CC02BF9478E0026C6C7 /* lottie.json */; };
@@ -74,6 +75,7 @@
 		9E3FBA4F2BF951E10085B6F1 /* PostGoalRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGoalRequestBody.swift; sourceTree = "<group>"; };
 		9E3FBA512BF9526C0085B6F1 /* PostNotTodoRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNotTodoRequestBody.swift; sourceTree = "<group>"; };
 		9E3FBA532BF952ED0085B6F1 /* PostTodoRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTodoRequestBody.swift; sourceTree = "<group>"; };
+		9E3FBA592BF9669B0085B6F1 /* CheckService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckService.swift; sourceTree = "<group>"; };
 		CA0C2CBB2BF931F70026C6C7 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		CA0C2CBD2BF933CE0026C6C7 /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
 		CA0C2CC02BF9478E0026C6C7 /* lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottie.json; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		9E3FBA3D2BF949E50085B6F1 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				9E3FBA582BF966810085B6F1 /* CheckToDoService */,
 				9E3FBA4E2BF951C80085B6F1 /* RequestDTO */,
 				9E3FBA492BF94F7D0085B6F1 /* ResponseDTO */,
 				9E3FBA3E2BF94A280085B6F1 /* Base */,
@@ -205,6 +208,14 @@
 				9E3FBA532BF952ED0085B6F1 /* PostTodoRequestBody.swift */,
 			);
 			path = RequestDTO;
+			sourceTree = "<group>";
+		};
+		9E3FBA582BF966810085B6F1 /* CheckToDoService */ = {
+			isa = PBXGroup;
+			children = (
+				9E3FBA592BF9669B0085B6F1 /* CheckService.swift */,
+			);
+			path = CheckToDoService;
 			sourceTree = "<group>";
 		};
 		CA0C2CBA2BF931EF0026C6C7 /* Views */ = {
@@ -516,6 +527,7 @@
 				787FA8FF2BF915B1007E5610 /* NotTodoCVC.swift in Sources */,
 				CA0C2CBC2BF931F70026C6C7 /* OnBoardingView.swift in Sources */,
 				CA2CBE592BF910E800049F8F /* OnBoardingViewController.swift in Sources */,
+				9E3FBA5A2BF9669B0085B6F1 /* CheckService.swift in Sources */,
 				CA2CBE292BF8DF5600049F8F /* UICollectionViewCell+.swift in Sources */,
 				CA2CBE042BF8DD3A00049F8F /* SceneDelegate.swift in Sources */,
 				CA2CBE5C2BF915AF00049F8F /* SplashViewController.swift in Sources */,
