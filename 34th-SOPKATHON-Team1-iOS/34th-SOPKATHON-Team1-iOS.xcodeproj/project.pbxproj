@@ -11,6 +11,10 @@
 		787FA9012BF915BD007E5610 /* TodoCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787FA9002BF915BD007E5610 /* TodoCVC.swift */; };
 		9E3FBA352BF914110085B6F1 /* ConfirmationAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3FBA342BF914110085B6F1 /* ConfirmationAlertViewController.swift */; };
 		9E3FBA3C2BF93BFE0085B6F1 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3FBA3B2BF93BFE0085B6F1 /* SuccessViewController.swift */; };
+		9E3FBA402BF94A370085B6F1 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3FBA3F2BF94A370085B6F1 /* NetworkResult.swift */; };
+		9E3FBA422BF94A480085B6F1 /* MoyaLoggingPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3FBA412BF94A480085B6F1 /* MoyaLoggingPlugin.swift */; };
+		9E3FBA442BF94A710085B6F1 /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3FBA432BF94A710085B6F1 /* BaseTargetType.swift */; };
+		9E3FBA482BF94BAB0085B6F1 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3FBA472BF94BAB0085B6F1 /* Config.swift */; };
 		CA0C2CBC2BF931F70026C6C7 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0C2CBB2BF931F70026C6C7 /* OnBoardingView.swift */; };
 		CA0C2CBE2BF933CE0026C6C7 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA0C2CBD2BF933CE0026C6C7 /* Montserrat-Bold.otf */; };
 		CA0C2CC12BF9478E0026C6C7 /* lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = CA0C2CC02BF9478E0026C6C7 /* lottie.json */; };
@@ -55,6 +59,11 @@
 		787FA9002BF915BD007E5610 /* TodoCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCVC.swift; sourceTree = "<group>"; };
 		9E3FBA342BF914110085B6F1 /* ConfirmationAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationAlertViewController.swift; sourceTree = "<group>"; };
 		9E3FBA3B2BF93BFE0085B6F1 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
+		9E3FBA3F2BF94A370085B6F1 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		9E3FBA412BF94A480085B6F1 /* MoyaLoggingPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaLoggingPlugin.swift; sourceTree = "<group>"; };
+		9E3FBA432BF94A710085B6F1 /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
+		9E3FBA452BF94AEB0085B6F1 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		9E3FBA472BF94BAB0085B6F1 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		CA0C2CBB2BF931F70026C6C7 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		CA0C2CBD2BF933CE0026C6C7 /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
 		CA0C2CC02BF9478E0026C6C7 /* lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottie.json; sourceTree = "<group>"; };
@@ -140,6 +149,33 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		9E3FBA3D2BF949E50085B6F1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9E3FBA3E2BF94A280085B6F1 /* Base */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		9E3FBA3E2BF94A280085B6F1 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9E3FBA3F2BF94A370085B6F1 /* NetworkResult.swift */,
+				9E3FBA412BF94A480085B6F1 /* MoyaLoggingPlugin.swift */,
+				9E3FBA432BF94A710085B6F1 /* BaseTargetType.swift */,
+				9E3FBA452BF94AEB0085B6F1 /* Config.xcconfig */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		9E3FBA462BF94BA00085B6F1 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				9E3FBA472BF94BAB0085B6F1 /* Config.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 		CA0C2CBA2BF931EF0026C6C7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +211,7 @@
 		CA2CBE002BF8DD3A00049F8F /* 34th-SOPKATHON-Team1-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				9E3FBA3D2BF949E50085B6F1 /* Network */,
 				CA2CBE442BF90DC700049F8F /* Presentation */,
 				CA2CBE262BF8DF3800049F8F /* Global */,
 				CA2CBE012BF8DD3A00049F8F /* AppDelegate.swift */,
@@ -190,6 +227,7 @@
 		CA2CBE262BF8DF3800049F8F /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				9E3FBA462BF94BA00085B6F1 /* Setting */,
 				CA2CBE322BF8E2D700049F8F /* Resources */,
 				CA2CBE272BF8DF4200049F8F /* Extensions */,
 			);
@@ -419,14 +457,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E3FBA442BF94A710085B6F1 /* BaseTargetType.swift in Sources */,
 				9E3FBA352BF914110085B6F1 /* ConfirmationAlertViewController.swift in Sources */,
 				CA2CBE062BF8DD3A00049F8F /* ViewController.swift in Sources */,
 				CA2CBE2D2BF8DFDC00049F8F /* UIStackView+.swift in Sources */,
 				D014574B2BF9213300A6E0AF /* RegisterToDoViewController.swift in Sources */,
 				CA2CBE432BF8F60D00049F8F /* UILabel+.swift in Sources */,
 				D014574E2BF9215800A6E0AF /* RegisterToDoView.swift in Sources */,
+				9E3FBA422BF94A480085B6F1 /* MoyaLoggingPlugin.swift in Sources */,
 				D01457502BF921A900A6E0AF /* RegisterNotToDoViewController.swift in Sources */,
 				CA2CBE4C2BF90E6D00049F8F /* CheckToDoViewController.swift in Sources */,
+				9E3FBA402BF94A370085B6F1 /* NetworkResult.swift in Sources */,
 				787FA9012BF915BD007E5610 /* TodoCVC.swift in Sources */,
 				CA2CBE2F2BF8DFF400049F8F /* UITableViewCell+.swift in Sources */,
 				CA2CBE022BF8DD3A00049F8F /* AppDelegate.swift in Sources */,
@@ -435,6 +476,7 @@
 				D01457522BF921C300A6E0AF /* RegisterNotToDoView.swift in Sources */,
 				9E3FBA3C2BF93BFE0085B6F1 /* SuccessViewController.swift in Sources */,
 				D0C0C0FE2BF8ED38005A7D5C /* UITextField+.swift in Sources */,
+				9E3FBA482BF94BAB0085B6F1 /* Config.swift in Sources */,
 				787FA8FF2BF915B1007E5610 /* NotTodoCVC.swift in Sources */,
 				CA0C2CBC2BF931F70026C6C7 /* OnBoardingView.swift in Sources */,
 				CA2CBE592BF910E800049F8F /* OnBoardingViewController.swift in Sources */,
@@ -523,6 +565,7 @@
 		};
 		CA2CBE112BF8DD3C00049F8F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E3FBA452BF94AEB0085B6F1 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -606,6 +649,7 @@
 		};
 		CA2CBE142BF8DD3C00049F8F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E3FBA452BF94AEB0085B6F1 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
