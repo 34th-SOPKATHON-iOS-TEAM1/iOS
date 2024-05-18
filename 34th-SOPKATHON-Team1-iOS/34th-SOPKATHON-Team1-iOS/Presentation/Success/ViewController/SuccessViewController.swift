@@ -61,7 +61,7 @@ class SuccessViewController: UIViewController {
       }
       
       sees0ImageView.do {
-         $0.image = UIImage(resource: .dummy10)
+         $0.image = UIImage(resource: .successModal)
          $0.layer.borderWidth = 0
       }
       
