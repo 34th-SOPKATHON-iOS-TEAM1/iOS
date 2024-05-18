@@ -128,12 +128,12 @@ extension CheckToDoViewController :  UICollectionViewDelegate, UICollectionViewD
             cell.delegate = self
             return cell
         } else {
+            
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TodoCVC", for: indexPath) as! TodoCVC
             cell.delegate = self
             return cell
         }
     }
-
 
 }
 
