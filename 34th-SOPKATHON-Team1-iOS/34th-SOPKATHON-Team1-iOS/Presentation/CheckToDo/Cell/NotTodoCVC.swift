@@ -110,21 +110,25 @@ class NotTodoCVC: UICollectionViewCell {
     
     @objc private func firstButtonTapped() {
         isFirstButtonPressed.toggle()
-        firstRowView.backgroundColor = isFirstButtonPressed ? .brown400 : UIColor.gray400
+        firstRowView.backgroundColor = isFirstButtonPressed ? UIColor.brown400 : UIColor.gray100
+        firstLabel.textColor = isFirstButtonPressed ? UIColor.gray100 : UIColor.gray800
         delegate?.buttonStateChanged(buttonIdentifier: "NotTodo1", isPressed: isFirstButtonPressed)
     }
-    
+
     @objc private func secondButtonTapped() {
         isSecondButtonPressed.toggle()
-        secondRowView.backgroundColor = isSecondButtonPressed ? .brown400 : UIColor.gray400
+        secondRowView.backgroundColor = isSecondButtonPressed ? UIColor.brown400 : UIColor.gray100
+        secondLabel.textColor = isSecondButtonPressed ? UIColor.gray100 : UIColor.gray800
         delegate?.buttonStateChanged(buttonIdentifier: "NotTodo2", isPressed: isSecondButtonPressed)
     }
-    
+
     @objc private func thirdButtonTapped() {
         isThirdButtonPressed.toggle()
-        thirdRowView.backgroundColor = isThirdButtonPressed ? .brown400 : UIColor.gray400
+        thirdRowView.backgroundColor = isThirdButtonPressed ? UIColor.brown400 : UIColor.gray100
+        thirdLabel.textColor = isThirdButtonPressed ? UIColor.gray100 : UIColor.gray800
         delegate?.buttonStateChanged(buttonIdentifier: "NotTodo3", isPressed: isThirdButtonPressed)
     }
+
     
     
     

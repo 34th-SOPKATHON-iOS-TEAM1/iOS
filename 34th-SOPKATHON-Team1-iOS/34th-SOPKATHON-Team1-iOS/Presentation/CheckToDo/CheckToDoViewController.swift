@@ -202,6 +202,6 @@ extension CheckToDoViewController: TodoCellDelegate {
 }
 
 
-//#Preview {
-//    CheckToDoViewController()
-//}
+#Preview {
+    CheckToDoViewController()
+}
