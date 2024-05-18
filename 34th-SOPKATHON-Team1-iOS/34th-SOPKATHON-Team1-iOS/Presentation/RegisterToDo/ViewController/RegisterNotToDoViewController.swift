@@ -23,7 +23,7 @@ final class RegisterNotToDoViewController: UIViewController {
         super.viewDidLoad()
         
         setupStyle()
-        setupDelegate()
+        setupAddTarget()
     }
 }
 
@@ -34,26 +34,39 @@ extension RegisterNotToDoViewController {
     private func setupStyle() {
         navigationController?.isNavigationBarHidden = true
     }
-
-    private func setupDelegate() {
-        rootView.setupTextFieldDelegate(self)
-    }
-}
-
-extension RegisterNotToDoViewController: UITextFieldDelegate {
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        textField.layer.borderColor = UIColor.brown400.cgColor
-        textField.layer.borderWidth = 2
-        textField.backgroundColor = .brown100
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
-        textField.layer.borderWidth = 0
-        textField.backgroundColor = .gray100
-    }
-    
-    func textFieldDidChangeSelection(_ textField: UITextField) {
+    private func setupAddTarget() {
+        rootView.clearButton1.addTarget(self, action: #selector(clearButtonTapped), for: .touchUpInside)
+        rootView.clearButton2.addTarget(self, action: #selector(clearButtonTapped), for: .touchUpInside)
         
+        rootView.clearButton3.addTarget(self, action: #selector(clearButtonTapped), for: .touchUpInside)
+        rootView.previousButton.addTarget(self, action: #selector(previousButtonTapped), for: .touchUpInside)
+        rootView.nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
     }
+    
+    @objc func clearButtonTapped(_ button: UIButton) {
+        switch button.tag {
+        case 1:
+            rootView.notTodoTextField1.text = ""
+            rootView.notTodoTextField1.rightViewMode = .never
+        case 2:
+            rootView.notTodoTextField2.text = ""
+            rootView.notTodoTextField2.rightViewMode = .never
+        case 3:
+            rootView.notTodoTextField3.text = ""
+            rootView.notTodoTextField3.rightViewMode = .never
+        default: break
+        }
+    }
+    
+    @objc func previousButtonTapped(_ button: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func nextButtonTapped(_ button: UIButton) {
+        let CheckToDoVC = CheckToDoViewController()
+        
+        navigationController?.pushViewController(CheckToDoVC, animated: true)
+    }
+
 }
