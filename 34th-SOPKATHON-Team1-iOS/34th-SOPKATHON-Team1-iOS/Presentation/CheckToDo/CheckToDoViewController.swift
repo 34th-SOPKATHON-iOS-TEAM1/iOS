@@ -9,6 +9,11 @@ import UIKit
 import SnapKit
 import Then
 
+protocol TodoCellDelegate: AnyObject {
+    func buttonStateDidChange()
+}
+
+
 class CheckToDoViewController: UIViewController {
     
     private var mainSeeSawImageView = UIImageView()
@@ -112,16 +117,36 @@ extension CheckToDoViewController :  UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.item == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NotTodoCVC", for: indexPath) as! NotTodoCVC
+            cell.delegate = self
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TodoCVC", for: indexPath) as! TodoCVC
+            cell.delegate = self
             return cell
         }
     }
+
+}
+extension CheckToDoViewController: TodoCellDelegate {
+    func buttonStateDidChange() {
+        DispatchQueue.main.async {
+            self.updateImageBasedOnState()
+        }
+    }
     
+    private func updateImageBasedOnState() {
+        
+        let imageIndex = calculateImageIndex()
+        mainSeeSawImageView.image = UIImage(named: "dummy\(imageIndex)")
+        print(1)
+    }
     
+    private func calculateImageIndex() -> Int {
+        return 2
+    }
 }
 
-#Preview {
-    CheckToDoViewController()
-}
+//
+//#Preview {
+//    CheckToDoViewController()
+//}

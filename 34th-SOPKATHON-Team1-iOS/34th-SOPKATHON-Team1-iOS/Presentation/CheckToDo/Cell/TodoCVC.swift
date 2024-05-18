@@ -5,39 +5,35 @@
 //
 //  Created by 이지훈 on 5/19/24.
 //
-
 import UIKit
 import SnapKit
 import Then
 
 class TodoCVC: UICollectionViewCell {
     
+    weak var delegate: TodoCellDelegate?
+    
     private let titleLabel = UILabel()
-    
     private let modifyLabel = UILabel()
-    
     private let firstRowView = UIView()
-    
     private let secondRowView = UIView()
-    
     private let thirdRowView = UIView()
-    
     private let firstLabel = UILabel()
-    
     private let secondLabel = UILabel()
-    
     private let thirdLabel = UILabel()
-    
     private let firstButton = UIButton()
-    
     private let secondButton = UIButton()
-    
     private let thirdButton = UIButton()
+    
+    private var isFirstButtonPressed = false
+    private var isSecondButtonPressed = false
+    private var isThirdButtonPressed = false
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupLayout()
         setupProperty()
+        setupButtonActions()
     }
     
     required init?(coder: NSCoder) {
@@ -87,27 +83,46 @@ class TodoCVC: UICollectionViewCell {
             $0.font = UIFont.pretendard(.title2)
         }
         
-        firstButton.do {
-            $0.setTitle("C", for: .normal)
-            $0.setTitleColor(.black, for: .normal)
-            $0.backgroundColor = .blue
-            $0.layer.cornerRadius = 5
-        }
-        
-        secondButton.do {
-            $0.setTitle("C", for: .normal)
-            $0.setTitleColor(.black, for: .normal)
-            $0.backgroundColor = .blue
-            $0.layer.cornerRadius = 5
-        }
-        
-        thirdButton.do {
+        setupButton(firstButton)
+        setupButton(secondButton)
+        setupButton(thirdButton)
+    }
+    
+    private func setupButton(_ button: UIButton) {
+        button.do {
             $0.setTitle("C", for: .normal)
             $0.setTitleColor(.black, for: .normal)
             $0.backgroundColor = .blue
             $0.layer.cornerRadius = 5
         }
     }
+    
+    private func setupButtonActions() {
+        firstButton.addTarget(self, action: #selector(firstButtonTapped), for: .touchUpInside)
+        secondButton.addTarget(self, action: #selector(secondButtonTapped), for: .touchUpInside)
+        thirdButton.addTarget(self, action: #selector(thirdButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc private func firstButtonTapped() {
+        isFirstButtonPressed.toggle()
+        firstButton.backgroundColor = isFirstButtonPressed ? .green : .blue
+        delegate?.buttonStateDidChange()
+    }
+    
+    
+    @objc private func secondButtonTapped() {
+        isSecondButtonPressed.toggle()
+        secondButton.backgroundColor = isSecondButtonPressed ? .green : .blue
+        
+        delegate?.buttonStateDidChange()
+    }
+    
+    @objc private func thirdButtonTapped() {
+        isThirdButtonPressed.toggle()
+        thirdButton.backgroundColor = isThirdButtonPressed ? .green : .blue
+        delegate?.buttonStateDidChange()
+    }
+    
     
     
     private func setupLayout() {
