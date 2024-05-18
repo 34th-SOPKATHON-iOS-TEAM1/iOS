@@ -9,15 +9,15 @@ import UIKit
 
 enum FontName {
     case heading1
-    case heading2, title1, title2
+    case heading2, heading3, title1, title2
     case body1
     case detail1
     
     var rawValue: String {
             switch self {
-            case .heading1:
-                return "Pretendard-Bold"
-            case .heading2, .title1, .title2:
+            case .heading1, .heading2:
+                return "Montserrat-Bold"
+            case .heading3, .title1, .title2:
                 return "Pretendard-SemiBold"
             case .detail1:
                 return "Pretendard-Medium"
@@ -29,8 +29,10 @@ enum FontName {
         var size: CGFloat {
             switch self {
             case .heading1:
-                return 24
+                return 28
             case .heading2:
+                return 24
+            case .heading3:
                 return 20
             case .title1:
                 return 18
