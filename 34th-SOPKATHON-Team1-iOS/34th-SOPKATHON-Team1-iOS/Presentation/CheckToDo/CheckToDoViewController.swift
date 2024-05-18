@@ -51,7 +51,7 @@ class CheckToDoViewController: UIViewController {
         }
         
         bottomRoundedView.do {
-            $0.backgroundColor = UIColor.gray200
+            $0.backgroundColor = UIColor.mint100
             $0.layer.cornerRadius = 12
             $0.clipsToBounds = true
         }
@@ -140,16 +140,42 @@ extension CheckToDoViewController :  UICollectionViewDelegate, UICollectionViewD
 extension CheckToDoViewController: TodoCellDelegate {
     
     func buttonStateChanged(buttonIdentifier: String, isPressed: Bool) {
-           buttonStates[buttonIdentifier] = isPressed
-           updateImageBasedOnState()
-       }
-       
+        buttonStates[buttonIdentifier] = isPressed
+        updateImageBasedOnState()
+    }
 
-        private func updateImageBasedOnState() {
-            let key = getStateKey()
-            let imageIndex = imageMapping[key, default: 1]
-            mainSeeSawImageView.image = UIImage(named: "dummy\(imageIndex)")
+    private func updateImageBasedOnState() {
+        let key = getStateKey()
+        let imageIndex = imageMapping[key, default: 1]
+        mainSeeSawImageView.image = UIImage(named: "dummy\(imageIndex)")
+
+        // Check if all buttons are pressed
+        if allButtonsArePressed() {
+            presentConfirmationAlert()
         }
+    }
+
+    private func allButtonsArePressed() -> Bool {
+        let keys = ["Todo1", "Todo2", "Todo3", "NotTodo1", "NotTodo2", "NotTodo3"]
+        return keys.allSatisfy { buttonStates[$0, default: false] }
+    }
+
+    private func presentConfirmationAlert() {
+        DispatchQueue.main.async {
+            let blurView = UIView()
+            self.view.addSubview(blurView)
+            blurView.do {
+                $0.backgroundColor = .white
+                $0.alpha = 0.50
+                $0.frame = self.view.frame
+            }
+
+            let alertVC = ConfirmationAlertViewController()
+            alertVC.modalPresentationStyle = .formSheet
+            self.present(alertVC, animated: true, completion: nil)
+        }
+    }
+
 
         private func getStateKey() -> String {
             let keys = ["Todo1", "Todo2", "Todo3", "NotTodo1", "NotTodo2", "NotTodo3"]
@@ -158,8 +184,7 @@ extension CheckToDoViewController: TodoCellDelegate {
 
 }
 
-//
-//
+
 //#Preview {
 //    CheckToDoViewController()
 //}
