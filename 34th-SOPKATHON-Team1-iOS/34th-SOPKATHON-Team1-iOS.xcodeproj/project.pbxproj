@@ -38,6 +38,7 @@
 		CA2CBE522BF90EB400049F8F /* RegisterToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE512BF90EB400049F8F /* RegisterToDoViewController.swift */; };
 		CA2CBE542BF90EC300049F8F /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE532BF90EC300049F8F /* SplashViewController.swift */; };
 		CA2CBE562BF90EDA00049F8F /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE552BF90EDA00049F8F /* OnBoardingViewController.swift */; };
+		D01457462BF9166600A6E0AF /* RegisterToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01457452BF9166600A6E0AF /* RegisterToDoView.swift */; };
 		D0C0C0FE2BF8ED38005A7D5C /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C0C0FD2BF8ED38005A7D5C /* UITextField+.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		CA2CBE512BF90EB400049F8F /* RegisterToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterToDoViewController.swift; sourceTree = "<group>"; };
 		CA2CBE532BF90EC300049F8F /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		CA2CBE552BF90EDA00049F8F /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		D01457452BF9166600A6E0AF /* RegisterToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterToDoView.swift; sourceTree = "<group>"; };
 		D0C0C0FD2BF8ED38005A7D5C /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				CA2CBE512BF90EB400049F8F /* RegisterToDoViewController.swift */,
+				D01457452BF9166600A6E0AF /* RegisterToDoView.swift */,
 			);
 			path = RegisterToDo;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				CA2CBE062BF8DD3A00049F8F /* ViewController.swift in Sources */,
 				CA2CBE2D2BF8DFDC00049F8F /* UIStackView+.swift in Sources */,
 				CA2CBE432BF8F60D00049F8F /* UILabel+.swift in Sources */,
+				D01457462BF9166600A6E0AF /* RegisterToDoView.swift in Sources */,
 				CA2CBE4C2BF90E6D00049F8F /* CheckToDoViewController.swift in Sources */,
 				CA2CBE522BF90EB400049F8F /* RegisterToDoViewController.swift in Sources */,
 				CA2CBE2F2BF8DFF400049F8F /* UITableViewCell+.swift in Sources */,
