@@ -113,18 +113,21 @@ extension RegisterToDoView {
             $0.setImage(UIImage(resource: .icClear), for: .normal)
             $0.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
             $0.contentMode = .scaleAspectFit
+            $0.isHidden = true
         }
         
         clearButton2.do {
             $0.setImage(UIImage(resource: .icClear), for: .normal)
             $0.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
             $0.contentMode = .scaleAspectFit
+            $0.isHidden = true
         }
         
         clearButton3.do {
             $0.setImage(UIImage(resource: .icClear), for: .normal)
             $0.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
             $0.contentMode = .scaleAspectFit
+            $0.isHidden = true
         }
         
         todoTextField1.do {
@@ -133,8 +136,8 @@ extension RegisterToDoView {
             $0.backgroundColor = .gray100
             $0.layer.cornerRadius = 12
             
+            //번호 이미지 추가해야함
             let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 37, height: 24))
-            leftView.addSubview(clearButton1)
             $0.leftViewMode = .always
             $0.leftView = leftView
             
@@ -150,6 +153,10 @@ extension RegisterToDoView {
             $0.backgroundColor = .gray100
             $0.layer.cornerRadius = 12
             
+            let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 37, height: 24))
+            $0.leftViewMode = .always
+            $0.leftView = leftView
+            
             let rightView = UIView(frame: CGRect(x: 0, y: 0, width: 37, height: 24))
             rightView.addSubview(clearButton2)
             $0.rightViewMode = .always
@@ -161,6 +168,10 @@ extension RegisterToDoView {
             $0.setTextFont(font: .pretendard(.title1), fontColor: .black000)
             $0.backgroundColor = .gray100
             $0.layer.cornerRadius = 12
+            
+            let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 37, height: 24))
+            $0.leftViewMode = .always
+            $0.leftView = leftView
             
             let rightView = UIView(frame: CGRect(x: 0, y: 0, width: 37, height: 24))
             rightView.addSubview(clearButton3)
@@ -245,4 +256,9 @@ extension RegisterToDoView {
     
     //MARK: - Method
     
+    func setupTextFieldDelegate(_ viewController: UITextFieldDelegate) {
+        todoTextField1.delegate = viewController
+        todoTextField2.delegate = viewController
+        todoTextField3.delegate = viewController
+    }
 }

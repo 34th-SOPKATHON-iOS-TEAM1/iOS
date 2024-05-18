@@ -28,9 +28,9 @@ final class RegisterNotToDoView: UIView {
     private let clearButton1 = UIButton()
     private let clearButton2 = UIButton()
     private let clearButton3 = UIButton()
-    private let todoTextField1 = UITextField()
-    private let todoTextField2 = UITextField()
-    private let todoTextField3 = UITextField()
+    private let notTodoTextField1 = UITextField()
+    private let notTodoTextField2 = UITextField()
+    private let notTodoTextField3 = UITextField()
     private let textFieldStackView = UIStackView()
 
     // MARK: - Life Cycles
@@ -113,58 +113,69 @@ extension RegisterNotToDoView {
             $0.setImage(UIImage(resource: .icClear), for: .normal)
             $0.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
             $0.contentMode = .scaleAspectFit
+            $0.isHidden = true
         }
         
         clearButton2.do {
             $0.setImage(UIImage(resource: .icClear), for: .normal)
             $0.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
             $0.contentMode = .scaleAspectFit
+            $0.isHidden = true
         }
         
         clearButton3.do {
             $0.setImage(UIImage(resource: .icClear), for: .normal)
             $0.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
             $0.contentMode = .scaleAspectFit
+            $0.isHidden = true
         }
         
-        todoTextField1.do {
+        notTodoTextField1.do {
+            $0.setPlaceholder(placeholder: "목표를 입력하세요", font: .pretendard(.title1), fontColor: .gray700)
+            $0.setTextFont(font: .pretendard(.title1), fontColor: .black000)
+            $0.backgroundColor = .gray100
+            $0.layer.cornerRadius = 12
+            
+            //번호 이미지 추가해야함
+            let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 37, height: 24))
+            $0.leftViewMode = .always
+            $0.leftView = leftView
+            
+            let rightView = UIView(frame: CGRect(x: 0, y: 0, width: 37, height: 24))
+            rightView.addSubview(clearButton1)
+            $0.rightViewMode = .never
+            $0.rightView = rightView
+        }
+        
+        notTodoTextField2.do {
             $0.setPlaceholder(placeholder: "목표를 입력하세요", font: .pretendard(.title1), fontColor: .gray700)
             $0.setTextFont(font: .pretendard(.title1), fontColor: .black000)
             $0.backgroundColor = .gray100
             $0.layer.cornerRadius = 12
             
             let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 37, height: 24))
-            leftView.addSubview(clearButton1)
             $0.leftViewMode = .always
             $0.leftView = leftView
             
             let rightView = UIView(frame: CGRect(x: 0, y: 0, width: 37, height: 24))
-            rightView.addSubview(clearButton1)
-            $0.rightViewMode = .always
+            rightView.addSubview(clearButton2)
+            $0.rightViewMode = .never
             $0.rightView = rightView
         }
         
-        todoTextField2.do {
+        notTodoTextField3.do {
             $0.setPlaceholder(placeholder: "목표를 입력하세요", font: .pretendard(.title1), fontColor: .gray700)
             $0.setTextFont(font: .pretendard(.title1), fontColor: .black000)
             $0.backgroundColor = .gray100
             $0.layer.cornerRadius = 12
             
-            let rightView = UIView(frame: CGRect(x: 0, y: 0, width: 37, height: 24))
-            rightView.addSubview(clearButton2)
-            $0.rightViewMode = .always
-            $0.rightView = rightView
-        }
-        
-        todoTextField3.do {
-            $0.setPlaceholder(placeholder: "목표를 입력하세요", font: .pretendard(.title1), fontColor: .gray700)
-            $0.setTextFont(font: .pretendard(.title1), fontColor: .black000)
-            $0.backgroundColor = .gray100
-            $0.layer.cornerRadius = 12
+            let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 37, height: 24))
+            $0.leftViewMode = .always
+            $0.leftView = leftView
             
             let rightView = UIView(frame: CGRect(x: 0, y: 0, width: 37, height: 24))
             rightView.addSubview(clearButton3)
-            $0.rightViewMode = .always
+            $0.rightViewMode = .never
             $0.rightView = rightView
         }
         
@@ -186,9 +197,9 @@ extension RegisterNotToDoView {
         )
         buttonStackView.addArrangedSubviews(previousButton, nextButton)
         textFieldStackView.addArrangedSubviews(
-            todoTextField1,
-            todoTextField2,
-            todoTextField3
+            notTodoTextField1,
+            notTodoTextField2,
+            notTodoTextField3
         )
     }
     
@@ -245,4 +256,9 @@ extension RegisterNotToDoView {
     
     //MARK: - Method
     
+    func setupTextFieldDelegate(_ viewController: UITextFieldDelegate) {
+        notTodoTextField1.delegate = viewController
+        notTodoTextField2.delegate = viewController
+        notTodoTextField3.delegate = viewController
+    }
 }
