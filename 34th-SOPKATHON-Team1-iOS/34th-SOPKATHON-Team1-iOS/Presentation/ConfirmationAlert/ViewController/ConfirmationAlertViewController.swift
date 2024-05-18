@@ -13,11 +13,11 @@ class ConfirmationAlertViewController: UIViewController {
    
    // MARK: - UI Components
    
-   let container = UIView()
+   private let container = UIView()
    
-   let congratulationsLabel = UILabel()
+   private let congratulationsLabel = UILabel()
    
-   let cancelBtn = UIButton()
+   private let cancelBtn = UIButton()
    
    let goToSeeS0wBtn = UIButton()
    
@@ -31,7 +31,7 @@ class ConfirmationAlertViewController: UIViewController {
    
    // MARK: setHierachy
    
-   func setHierachy() {
+   private func setHierachy() {
       container.addSubviews(cancelBtn, congratulationsLabel, goToSeeS0wBtn)
       if let sheetPresentationController = sheetPresentationController {
          sheetPresentationController.preferredCornerRadius = 15
@@ -44,7 +44,7 @@ class ConfirmationAlertViewController: UIViewController {
    
    // MARK: setStyle
    
-   func setStyle() {
+   private func setStyle() {
       container.do {
          $0.layer.cornerRadius = 12
          $0.layer.borderColor = UIColor.red.cgColor
@@ -76,7 +76,7 @@ class ConfirmationAlertViewController: UIViewController {
    
    // MARK: setLayout
    
-   func setLayout() {
+   private func setLayout() {
       congratulationsLabel.snp.makeConstraints {
          $0.top.equalToSuperview().offset(64)
          $0.leading.trailing.equalToSuperview().inset(16)
