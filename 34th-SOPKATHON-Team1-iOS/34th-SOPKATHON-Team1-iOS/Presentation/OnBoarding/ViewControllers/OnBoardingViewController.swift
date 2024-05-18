@@ -7,23 +7,49 @@
 
 import UIKit
 
-class OnBoardingViewController: UIViewController {
+final class OnBoardingViewController: UIViewController {
 
+    // MARK: - UI Properties
+    
+    private let onBoardingView = OnBoardingView()
+    
+    
+    // MARK: - Properties
+        
+    private let statusBarHeight: CGFloat = UIApplication.shared.statusBarFrame.height
+
+    
+    // MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        setHierarchy()
+        setLayout()
+        setStyle()
     }
     
+}
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+// MARK: - Private Methods
+
+private extension OnBoardingViewController {
+    
+    func setHierarchy() {
+        self.view.addSubview(onBoardingView)
     }
-    */
-
+    
+    func setLayout() {
+        onBoardingView.snp.makeConstraints {
+            $0.horizontalEdges.equalToSuperview().inset(16)
+            $0.bottom.equalToSuperview().inset(56)
+            $0.top.equalToSuperview().inset(statusBarHeight + 9)
+        }
+    }
+    
+    func setStyle() {
+        self.view.backgroundColor = UIColor(resource: .white000)
+    }
+    
 }
