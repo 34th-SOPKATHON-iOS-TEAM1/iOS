@@ -5,15 +5,25 @@
 
 <br/>
 
+### ✅ 서비스 이름 및 간단한 소개
+- 서비스 이름: 두잉낫두잉
+- 소개: 나의 TO-DO와 NOT-TO-DO를 한 번에 관리하는 나만의 균형 있는 TODO 앱 ‘두잉낫두잉’입니다.
+
+
+<br/>
+
+### 🛠️ 주요 기능
+<img width="70%" alt="스크린샷 2024-05-19 오전 12 42 35" src="https://github.com/34th-SOPKATHON-iOS-TEAM1/iOS/assets/105407130/9272ba20-2c6a-4040-8c6b-e83ea686e1b7">
+<br/><br/>
 
 ### 👩‍💻 About Developers
 | [윤희슬](https://github.com/seuriseuljjeok) | [조혜린](https://github.com/Johyerin) | [이지훈](https://github.com/yizihn)| [박신영](https://github.com/ParkSY0919) |
 | --- | --- | --- | --- | 
 | <img src = "https://github.com/NOW-SOPT-APP2-KAKAOBANK/KAKAOBANK-iOS/assets/105407130/b5f3e830-1cf6-4dd0-98ce-78f75a313fdd" width = "300">| <img src = "https://github.com/34th-SOPKATHON-iOS-TEAM1/iOS/assets/105407130/3bcb2234-03e9-4dde-bb7a-2abf9185a30a" width = "300"> | <img src = "https://github.com/34th-SOPKATHON-iOS-TEAM1/iOS/assets/105407130/c0874ff0-e5fa-4bb0-b9ad-843de29387c5" width = "300"> | <img src = "https://github.com/34th-SOPKATHON-iOS-TEAM1/iOS/assets/105407130/384469be-faf7-4d9d-81a8-42a3aca42e79" width = "300"> |
-|<p align = "center">` 뷰모델`|<p align = "center">` 뷰컨트롤러`|<p align = "center">` 더미데이터`|<p align = "center">` 모델`|
+|<p align = "center">` 스플래시 & 온보딩`|<p align = "center">` 목표 등록뷰`|<p align = "center">` 투두 체크`|<p align = "center">` 알럿 & 달성뷰`|
 
 
-
+<br/>
 
 
 ## 🍏 Github Convention
@@ -27,6 +37,19 @@
 - [Docs]: README나 WIKI 등의 문서 개정
 - [Merge]: #이슈번호 - 머지
 - [Setting] : 프로젝트 세팅 및 기타 세팅
+
+<br/>
+
+## 🍏 Branch Convention
+feature → 기능 구현
+setting → 세팅 관련
+refactor → 리팩토링 관련
+fix → 수정 관련
+
+ex ) feature/#이슈번호,  refactor/#이슈번호
+
+<br/>
+
 
 ## 📂 Foldering
 ```bash
@@ -56,3 +79,10 @@
 │   │   │   ├── 🗂️ ViewControllers
 ├── .swiftlint
 ```
+<br/>
+
+
+
+## 📸 아요네 사진~!
+
+<img src = "https://github.com/34th-SOPKATHON-iOS-TEAM1/iOS/assets/105407130/83063b5f-3f1c-4935-bd5f-ba720b49658f" width = "700">
