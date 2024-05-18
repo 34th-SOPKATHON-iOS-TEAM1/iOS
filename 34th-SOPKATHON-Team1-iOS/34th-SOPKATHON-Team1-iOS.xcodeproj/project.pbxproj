@@ -258,6 +258,8 @@
 				CAB573222BF9299900866184 /* OnBoardingView.swift */,
 			);
 			path = Views;
+      sourceTree = "<group>";
+		};
 		D01457492BF9211B00A6E0AF /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
