@@ -22,18 +22,18 @@ final class RegisterToDoView: UIView {
     private let stepLabel = UILabel()
     private let titleLabel = UILabel()
     private let discriptionLabel = UILabel()
-    private let previousButton = UIButton()
-    private let nextButton = UIButton()
+    let previousButton = UIButton()
+    let nextButton = UIButton()
     private let buttonStackView = UIStackView()
     private let indexImage1 = UIImageView()
     private let indexImage2 = UIImageView()
     private let indexImage3 = UIImageView()
-    private let clearButton1 = UIButton()
-    private let clearButton2 = UIButton()
-    private let clearButton3 = UIButton()
-    private let todoTextField1 = UITextField()
-    private let todoTextField2 = UITextField()
-    private let todoTextField3 = UITextField()
+    let clearButton1 = UIButton()
+    let clearButton2 = UIButton()
+    let clearButton3 = UIButton()
+    let todoTextField1 = UITextField()
+    let todoTextField2 = UITextField()
+    let todoTextField3 = UITextField()
     private let textFieldStackView = UIStackView()
 
     // MARK: - Life Cycles
@@ -131,21 +131,21 @@ extension RegisterToDoView {
             $0.setImage(UIImage(resource: .cancel), for: .normal)
             $0.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
             $0.contentMode = .scaleAspectFit
-            $0.isHidden = true
+            $0.tag = 1
         }
         
         clearButton2.do {
             $0.setImage(UIImage(resource: .cancel), for: .normal)
             $0.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
             $0.contentMode = .scaleAspectFit
-            $0.isHidden = true
+            $0.tag = 2
         }
         
         clearButton3.do {
             $0.setImage(UIImage(resource: .cancel), for: .normal)
             $0.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
             $0.contentMode = .scaleAspectFit
-            $0.isHidden = true
+            $0.tag = 3
         }
         
         todoTextField1.do {
@@ -153,6 +153,7 @@ extension RegisterToDoView {
             $0.setTextFont(font: .pretendard(.title1), fontColor: .black000)
             $0.backgroundColor = .gray100
             $0.layer.cornerRadius = 12
+            $0.delegate = self
             
             let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 72, height: 32))
             leftView.addSubview(indexImage1)
@@ -161,7 +162,7 @@ extension RegisterToDoView {
             
             let rightView = UIView(frame: CGRect(x: 0, y: 0, width: 37, height: 24))
             rightView.addSubview(clearButton1)
-            $0.rightViewMode = .always
+            $0.rightViewMode = .never
             $0.rightView = rightView
         }
         
@@ -170,7 +171,8 @@ extension RegisterToDoView {
             $0.setTextFont(font: .pretendard(.title1), fontColor: .black000)
             $0.backgroundColor = .gray100
             $0.layer.cornerRadius = 12
-            
+            $0.delegate = self
+
             let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 72, height: 32))
             leftView.addSubview(indexImage2)
             $0.leftViewMode = .always
@@ -178,7 +180,7 @@ extension RegisterToDoView {
             
             let rightView = UIView(frame: CGRect(x: 0, y: 0, width: 37, height: 24))
             rightView.addSubview(clearButton2)
-            $0.rightViewMode = .always
+            $0.rightViewMode = .never
             $0.rightView = rightView
         }
         
@@ -187,7 +189,8 @@ extension RegisterToDoView {
             $0.setTextFont(font: .pretendard(.title1), fontColor: .black000)
             $0.backgroundColor = .gray100
             $0.layer.cornerRadius = 12
-            
+            $0.delegate = self
+
             let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 72, height: 32))
             leftView.addSubview(indexImage3)
             $0.leftViewMode = .always
@@ -195,7 +198,7 @@ extension RegisterToDoView {
             
             let rightView = UIView(frame: CGRect(x: 0, y: 0, width: 37, height: 24))
             rightView.addSubview(clearButton3)
-            $0.rightViewMode = .always
+            $0.rightViewMode = .never
             $0.rightView = rightView
         }
         
@@ -273,12 +276,37 @@ extension RegisterToDoView {
             $0.top.equalTo(discriptionLabel.snp.bottom).offset(22)
         }
     }
+}
+
+extension RegisterToDoView: UITextFieldDelegate {
     
-    //MARK: - Method
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.layer.borderColor = UIColor.mint400.cgColor
+        textField.layer.borderWidth = 2
+        textField.backgroundColor = .mint100
+    }
     
-    func setupTextFieldDelegate(_ viewController: UITextFieldDelegate) {
-        todoTextField1.delegate = viewController
-        todoTextField2.delegate = viewController
-        todoTextField3.delegate = viewController
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+        let text = textField.text ?? ""
+
+        textField.layer.borderWidth = 0
+        textField.backgroundColor = .gray100
+        textField.rightViewMode = .never
+
+        if text.isEmpty {
+            textField.backgroundColor = UIColor(resource: .gray100)
+        } else {
+            textField.backgroundColor = UIColor(resource: .mint100)
+        }
+    }
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        let text = textField.text ?? ""
+
+        if text.isEmpty {
+            textField.rightViewMode = .never
+        } else {
+            textField.rightViewMode = .always
+        }
     }
 }

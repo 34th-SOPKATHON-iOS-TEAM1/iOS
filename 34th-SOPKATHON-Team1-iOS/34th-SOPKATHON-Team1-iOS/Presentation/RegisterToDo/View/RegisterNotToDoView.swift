@@ -22,18 +22,18 @@ final class RegisterNotToDoView: UIView {
     private let stepLabel = UILabel()
     private let titleLabel = UILabel()
     private let discriptionLabel = UILabel()
-    private let previousButton = UIButton()
-    private let nextButton = UIButton()
+    let previousButton = UIButton()
+    let nextButton = UIButton()
     private let buttonStackView = UIStackView()
     private let indexImage1 = UIImageView()
     private let indexImage2 = UIImageView()
     private let indexImage3 = UIImageView()
-    private let clearButton1 = UIButton()
-    private let clearButton2 = UIButton()
-    private let clearButton3 = UIButton()
-    private let notTodoTextField1 = UITextField()
-    private let notTodoTextField2 = UITextField()
-    private let notTodoTextField3 = UITextField()
+    let clearButton1 = UIButton()
+    let clearButton2 = UIButton()
+    let clearButton3 = UIButton()
+    let notTodoTextField1 = UITextField()
+    let notTodoTextField2 = UITextField()
+    let notTodoTextField3 = UITextField()
     private let textFieldStackView = UIStackView()
     
 
@@ -133,21 +133,21 @@ extension RegisterNotToDoView {
             $0.setImage(UIImage(resource: .cancel), for: .normal)
             $0.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
             $0.contentMode = .scaleAspectFit
-            $0.isHidden = true
+            $0.tag = 1
         }
         
         clearButton2.do {
             $0.setImage(UIImage(resource: .cancel), for: .normal)
             $0.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
             $0.contentMode = .scaleAspectFit
-            $0.isHidden = true
+            $0.tag = 2
         }
         
         clearButton3.do {
             $0.setImage(UIImage(resource: .cancel), for: .normal)
             $0.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
             $0.contentMode = .scaleAspectFit
-            $0.isHidden = true
+            $0.tag = 3
         }
         
         notTodoTextField1.do {
@@ -155,6 +155,7 @@ extension RegisterNotToDoView {
             $0.setTextFont(font: .pretendard(.title1), fontColor: .black000)
             $0.backgroundColor = .gray100
             $0.layer.cornerRadius = 12
+            $0.delegate = self
             
             let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 72, height: 32))
             leftView.addSubview(indexImage1)
@@ -172,6 +173,7 @@ extension RegisterNotToDoView {
             $0.setTextFont(font: .pretendard(.title1), fontColor: .black000)
             $0.backgroundColor = .gray100
             $0.layer.cornerRadius = 12
+            $0.delegate = self
             
             let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 72, height: 32))
             leftView.addSubview(indexImage2)
@@ -189,7 +191,8 @@ extension RegisterNotToDoView {
             $0.setTextFont(font: .pretendard(.title1), fontColor: .black000)
             $0.backgroundColor = .gray100
             $0.layer.cornerRadius = 12
-            
+            $0.delegate = self
+
             let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 72, height: 32))
             leftView.addSubview(indexImage3)
             $0.leftViewMode = .always
@@ -275,12 +278,37 @@ extension RegisterNotToDoView {
             $0.top.equalTo(discriptionLabel.snp.bottom).offset(22)
         }
     }
+}
+
+extension RegisterNotToDoView: UITextFieldDelegate {
     
-    //MARK: - Method
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.layer.borderColor = UIColor.brown400.cgColor
+        textField.layer.borderWidth = 2
+        textField.backgroundColor = .brown100
+    }
     
-    func setupTextFieldDelegate(_ viewController: UITextFieldDelegate) {
-        notTodoTextField1.delegate = viewController
-        notTodoTextField2.delegate = viewController
-        notTodoTextField3.delegate = viewController
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+        let text = textField.text ?? ""
+
+        textField.layer.borderWidth = 0
+        textField.backgroundColor = .gray100
+        textField.rightViewMode = .never
+
+        if text.isEmpty {
+            textField.backgroundColor = UIColor(resource: .gray100)
+        } else {
+            textField.backgroundColor = UIColor(resource: .brown100)
+        }
+    }
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        let text = textField.text ?? ""
+
+        if text.isEmpty {
+            textField.rightViewMode = .never
+        } else {
+            textField.rightViewMode = .always
+        }
     }
 }
