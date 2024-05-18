@@ -1,5 +1,5 @@
 //
-//  RegisterToDoViewController.swift
+//  RegisterNotToDoViewController.swift
 //  34th-SOPKATHON-Team1-iOS
 //
 //  Created by 윤희슬 on 5/19/24.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-final class RegisterToDoViewController: UIViewController {
+final class RegisterNotToDoViewController: UIViewController {
 
     // MARK: - Properties
     
-    private let rootView = RegisterToDoView()
+    private let rootView = RegisterNotToDoView()
 
     // MARK: - Life Cycles
 
@@ -21,14 +21,19 @@ final class RegisterToDoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        setupStyle()
         setupDelegate()
     }
 }
 
-extension RegisterToDoViewController {
+extension RegisterNotToDoViewController {
     
     //MARK: - Private Method
+    
+    private func setupStyle() {
+        navigationController?.isNavigationBarHidden = true
+    }
 
     private func setupDelegate() {
         

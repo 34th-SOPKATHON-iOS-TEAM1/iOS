@@ -22,6 +22,9 @@ final class RegisterToDoView: UIView {
     private let stepLabel = UILabel()
     private let titleLabel = UILabel()
     private let discriptionLabel = UILabel()
+    private let previousButton = UIButton()
+    private let nextButton = UIButton()
+    private let buttonStackView = UIStackView()
 
     // MARK: - Life Cycles
     
@@ -75,13 +78,41 @@ extension RegisterToDoView {
             $0.textColor = .gray800
             $0.font = .pretendard(.title2)
         }
+        
+        previousButton.do {
+            $0.setTitle("이전", for: .normal)
+            $0.setTitleColor(.black000, for: .normal)
+            $0.titleLabel?.font = .pretendard(.heading3)
+            $0.backgroundColor = .gray100
+            $0.layer.borderWidth = 1
+            $0.layer.borderColor = UIColor.gray600.cgColor
+            $0.layer.cornerRadius = 32
+        }
+        
+        nextButton.do {
+            $0.setTitle("다음", for: .normal)
+            $0.setTitleColor(.white000, for: .normal)
+            $0.titleLabel?.font = .pretendard(.heading3)
+            $0.backgroundColor = .black000
+            $0.layer.cornerRadius = 32
+        }
+        
+        buttonStackView.do {
+            $0.axis = .horizontal
+            $0.spacing = 7
+        }
     }
     
     private func setupHierarchy() {
         addSubviews(
             viewTitleLabel,
-            dividerView
+            dividerView,
+            stepLabel,
+            titleLabel,
+            discriptionLabel,
+            buttonStackView
         )
+        buttonStackView.addArrangedSubviews(previousButton, nextButton)
     }
     
     private func setupLayout() {
@@ -93,7 +124,37 @@ extension RegisterToDoView {
         dividerView.snp.makeConstraints {
             $0.horizontalEdges.equalToSuperview()
             $0.height.equalTo(1)
-            $0.bottom.equalTo(viewTitleLabel.snp.bottom).inset(15.5)
+            $0.top.equalTo(viewTitleLabel.snp.bottom).offset(15.5)
+        }
+        
+        stepLabel.snp.makeConstraints {
+            $0.leading.equalToSuperview().inset(16)
+            $0.top.equalTo(dividerView.snp.bottom).offset(32)
+        }
+        
+        titleLabel.snp.makeConstraints {
+            $0.leading.equalToSuperview().inset(16)
+            $0.top.equalTo(stepLabel.snp.bottom).offset(14)
+        }
+        
+        discriptionLabel.snp.makeConstraints {
+            $0.leading.equalToSuperview().inset(16)
+            $0.top.equalTo(titleLabel.snp.bottom).offset(6)
+        }
+        
+        previousButton.snp.makeConstraints{
+            $0.height.equalTo(64)
+            $0.width.equalTo(168)
+        }
+        
+        nextButton.snp.makeConstraints{
+            $0.height.equalTo(64)
+            $0.width.equalTo(168)
+        }
+        
+        buttonStackView.snp.makeConstraints{
+            $0.centerX.equalToSuperview()
+            $0.bottom.equalToSuperview().inset(56)
         }
     }
     
