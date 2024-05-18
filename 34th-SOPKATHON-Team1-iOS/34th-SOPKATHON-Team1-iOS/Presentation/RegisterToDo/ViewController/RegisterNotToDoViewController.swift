@@ -43,9 +43,9 @@ extension RegisterNotToDoViewController {
 extension RegisterNotToDoViewController: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        textField.layer.borderColor = UIColor.red.cgColor
+        textField.layer.borderColor = UIColor.brown400.cgColor
         textField.layer.borderWidth = 2
-        textField.backgroundColor = .lightGray
+        textField.backgroundColor = .brown100
     }
     
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {

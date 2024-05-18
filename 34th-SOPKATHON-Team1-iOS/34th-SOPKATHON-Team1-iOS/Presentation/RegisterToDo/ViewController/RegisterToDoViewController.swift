@@ -43,9 +43,9 @@ extension RegisterToDoViewController {
 extension RegisterToDoViewController: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        textField.layer.borderColor = UIColor.red.cgColor
+        textField.layer.borderColor = UIColor.mint400.cgColor
         textField.layer.borderWidth = 2
-        textField.backgroundColor = .lightGray
+        textField.backgroundColor = .mint100
     }
     
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {

@@ -25,6 +25,9 @@ final class RegisterToDoView: UIView {
     private let previousButton = UIButton()
     private let nextButton = UIButton()
     private let buttonStackView = UIStackView()
+    private let indexImage1 = UIImageView()
+    private let indexImage2 = UIImageView()
+    private let indexImage3 = UIImageView()
     private let clearButton1 = UIButton()
     private let clearButton2 = UIButton()
     private let clearButton3 = UIButton()
@@ -88,7 +91,7 @@ extension RegisterToDoView {
         
         previousButton.do {
             $0.setTitle("이전", for: .normal)
-            $0.setTitleColor(.black000, for: .normal)
+            $0.setTitleColor(.gray800, for: .normal)
             $0.titleLabel?.font = .pretendard(.heading3)
             $0.backgroundColor = .gray100
             $0.layer.borderWidth = 1
@@ -100,7 +103,7 @@ extension RegisterToDoView {
             $0.setTitle("다음", for: .normal)
             $0.setTitleColor(.white000, for: .normal)
             $0.titleLabel?.font = .pretendard(.heading3)
-            $0.backgroundColor = .black000
+            $0.backgroundColor = .mint400
             $0.layer.cornerRadius = 32
         }
         
@@ -109,22 +112,37 @@ extension RegisterToDoView {
             $0.spacing = 7
         }
         
+        indexImage1.do {
+            $0.image = .imgGray1
+            $0.frame = CGRect(x: 24, y: 0, width: 32, height: 32)
+        }
+        
+        indexImage2.do {
+            $0.image = .imgGray2
+            $0.frame = CGRect(x: 24, y: 0, width: 32, height: 32)
+        }
+        
+        indexImage3.do {
+            $0.image = .imgGray3
+            $0.frame = CGRect(x: 24, y: 0, width: 32, height: 32)
+        }
+        
         clearButton1.do {
-            $0.setImage(UIImage(resource: .icClear), for: .normal)
+            $0.setImage(UIImage(resource: .cancel), for: .normal)
             $0.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
             $0.contentMode = .scaleAspectFit
             $0.isHidden = true
         }
         
         clearButton2.do {
-            $0.setImage(UIImage(resource: .icClear), for: .normal)
+            $0.setImage(UIImage(resource: .cancel), for: .normal)
             $0.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
             $0.contentMode = .scaleAspectFit
             $0.isHidden = true
         }
         
         clearButton3.do {
-            $0.setImage(UIImage(resource: .icClear), for: .normal)
+            $0.setImage(UIImage(resource: .cancel), for: .normal)
             $0.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
             $0.contentMode = .scaleAspectFit
             $0.isHidden = true
@@ -136,8 +154,8 @@ extension RegisterToDoView {
             $0.backgroundColor = .gray100
             $0.layer.cornerRadius = 12
             
-            //번호 이미지 추가해야함
-            let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 37, height: 24))
+            let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 72, height: 32))
+            leftView.addSubview(indexImage1)
             $0.leftViewMode = .always
             $0.leftView = leftView
             
@@ -153,7 +171,8 @@ extension RegisterToDoView {
             $0.backgroundColor = .gray100
             $0.layer.cornerRadius = 12
             
-            let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 37, height: 24))
+            let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 72, height: 32))
+            leftView.addSubview(indexImage2)
             $0.leftViewMode = .always
             $0.leftView = leftView
             
@@ -169,7 +188,8 @@ extension RegisterToDoView {
             $0.backgroundColor = .gray100
             $0.layer.cornerRadius = 12
             
-            let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 37, height: 24))
+            let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 72, height: 32))
+            leftView.addSubview(indexImage3)
             $0.leftViewMode = .always
             $0.leftView = leftView
             
