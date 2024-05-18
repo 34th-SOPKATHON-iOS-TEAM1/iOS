@@ -13,11 +13,11 @@ class ConfirmationAlertViewController: UIViewController {
    
    // MARK: - UI Components
    
-   let container = UIView()
+   private let container = UIView()
    
-   let congratulationsLabel = UILabel()
+   private let congratulationsLabel = UILabel()
    
-   let cancelBtn = UIButton()
+   private let cancelBtn = UIButton()
    
    let goToSeeS0wBtn = UIButton()
    
@@ -29,7 +29,9 @@ class ConfirmationAlertViewController: UIViewController {
       setLayout()
    }
    
-   func setHierachy() {
+   // MARK: setHierachy
+   
+   private func setHierachy() {
       container.addSubviews(cancelBtn, congratulationsLabel, goToSeeS0wBtn)
       if let sheetPresentationController = sheetPresentationController {
          sheetPresentationController.preferredCornerRadius = 15
@@ -40,7 +42,9 @@ class ConfirmationAlertViewController: UIViewController {
       view.addSubview(container)
    }
    
-   func setStyle() {
+   // MARK: setStyle
+   
+   private func setStyle() {
       container.do {
          $0.layer.cornerRadius = 12
          $0.layer.borderColor = UIColor.red.cgColor
@@ -60,17 +64,19 @@ class ConfirmationAlertViewController: UIViewController {
       }
       
       goToSeeS0wBtn.do {
-         $0.backgroundColor = .black000
+         $0.backgroundColor = .mint400
          $0.layer.cornerRadius = 30
          $0.setTitle("내 시소 보러가기", for: .normal)
-         $0.titleLabel?.font = .pretendard(.heading2)
+         $0.titleLabel?.font = .pretendard(.heading3)
          $0.titleLabel?.textColor = .white000
          $0.titleLabel?.textAlignment = .center
          $0.addTarget(self, action: #selector(didTapgoToSeeS0wBtn), for: .touchUpInside)
       }
    }
    
-   func setLayout() {
+   // MARK: setLayout
+   
+   private func setLayout() {
       congratulationsLabel.snp.makeConstraints {
          $0.top.equalToSuperview().offset(64)
          $0.leading.trailing.equalToSuperview().inset(16)
@@ -94,6 +100,8 @@ class ConfirmationAlertViewController: UIViewController {
          $0.width.equalTo(277)
       }
    }
+   
+   // MARK: @objc func
    
    @objc func didTapCancelBtn() {
       self.dismiss(animated: true)

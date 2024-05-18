@@ -18,7 +18,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // 2.
         self.window = UIWindow(windowScene: windowScene)
         // 3.
-        let navigationController = UINavigationController(rootViewController: CheckToDoViewController())
+
+        let navigationController = UINavigationController(rootViewController: SplashViewController())
         navigationController.setNavigationBarHidden(true, animated: false)
         self.window?.rootViewController = navigationController
         // 4.

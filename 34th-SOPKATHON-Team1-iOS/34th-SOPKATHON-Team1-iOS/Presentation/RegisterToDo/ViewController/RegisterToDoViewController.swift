@@ -23,7 +23,7 @@ final class RegisterToDoViewController: UIViewController {
         super.viewDidLoad()
         
         setupStyle()
-        setupDelegate()
+        setupAddTarget()
     }
 }
 
@@ -35,25 +35,38 @@ extension RegisterToDoViewController {
         navigationController?.isNavigationBarHidden = true
     }
 
-    private func setupDelegate() {
-        rootView.setupTextFieldDelegate(self)
+    private func setupAddTarget() {
+        rootView.clearButton1.addTarget(self, action: #selector(clearButtonTapped), for: .touchUpInside)
+        rootView.clearButton2.addTarget(self, action: #selector(clearButtonTapped), for: .touchUpInside)
+
+        rootView.clearButton3.addTarget(self, action: #selector(clearButtonTapped), for: .touchUpInside)
+        rootView.previousButton.addTarget(self, action: #selector(previousButtonTapped), for: .touchUpInside)
+        rootView.nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc func clearButtonTapped(_ button: UIButton) {
+        switch button.tag {
+        case 1:
+            rootView.todoTextField1.text = ""
+            rootView.todoTextField1.rightViewMode = .never
+        case 2:
+            rootView.todoTextField2.text = ""
+            rootView.todoTextField2.rightViewMode = .never
+        case 3:
+            rootView.todoTextField3.text = ""
+            rootView.todoTextField3.rightViewMode = .never
+        default: break
+        }
+    }
+    
+    @objc func previousButtonTapped(_ button: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func nextButtonTapped(_ button: UIButton) {
+        let RegisterNotToDoVC = RegisterNotToDoViewController()
+        
+        navigationController?.pushViewController(RegisterNotToDoVC, animated: true)
     }
 }
 
-extension RegisterToDoViewController: UITextFieldDelegate {
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        textField.layer.borderColor = UIColor.mint400.cgColor
-        textField.layer.borderWidth = 2
-        textField.backgroundColor = .mint100
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
-        textField.layer.borderWidth = 0
-        textField.backgroundColor = .gray100
-    }
-    
-    func textFieldDidChangeSelection(_ textField: UITextField) {
-        
-    }
-}
