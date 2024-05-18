@@ -36,8 +36,8 @@
 		CA2CBE4E2BF90E7A00049F8F /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE4D2BF90E7A00049F8F /* SuccessViewController.swift */; };
 		CA2CBE502BF90E9600049F8F /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE4F2BF90E9600049F8F /* AlertViewController.swift */; };
 		CA2CBE522BF90EB400049F8F /* RegisterToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE512BF90EB400049F8F /* RegisterToDoViewController.swift */; };
-		CA2CBE542BF90EC300049F8F /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE532BF90EC300049F8F /* SplashViewController.swift */; };
-		CA2CBE562BF90EDA00049F8F /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE552BF90EDA00049F8F /* OnBoardingViewController.swift */; };
+		CA2CBE592BF910E800049F8F /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE582BF910E800049F8F /* OnBoardingViewController.swift */; };
+		CA2CBE5C2BF915AF00049F8F /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CBE5B2BF915AF00049F8F /* SplashViewController.swift */; };
 		D0C0C0FE2BF8ED38005A7D5C /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C0C0FD2BF8ED38005A7D5C /* UITextField+.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,8 +66,8 @@
 		CA2CBE4D2BF90E7A00049F8F /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
 		CA2CBE4F2BF90E9600049F8F /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		CA2CBE512BF90EB400049F8F /* RegisterToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterToDoViewController.swift; sourceTree = "<group>"; };
-		CA2CBE532BF90EC300049F8F /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		CA2CBE552BF90EDA00049F8F /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		CA2CBE582BF910E800049F8F /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		CA2CBE5B2BF915AF00049F8F /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		D0C0C0FD2BF8ED38005A7D5C /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,7 +181,7 @@
 		CA2CBE452BF90DCF00049F8F /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
-				CA2CBE552BF90EDA00049F8F /* OnBoardingViewController.swift */,
+				CA2CBE572BF9104800049F8F /* ViewControllers */,
 			);
 			path = OnBoarding;
 			sourceTree = "<group>";
@@ -189,7 +189,7 @@
 		CA2CBE462BF90DE000049F8F /* Splash */ = {
 			isa = PBXGroup;
 			children = (
-				CA2CBE532BF90EC300049F8F /* SplashViewController.swift */,
+				CA2CBE5A2BF9159B00049F8F /* ViewControllers */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -224,6 +224,22 @@
 				CA2CBE4B2BF90E6D00049F8F /* CheckToDoViewController.swift */,
 			);
 			path = CheckToDo;
+			sourceTree = "<group>";
+		};
+		CA2CBE572BF9104800049F8F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CA2CBE582BF910E800049F8F /* OnBoardingViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CA2CBE5A2BF9159B00049F8F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CA2CBE5B2BF915AF00049F8F /* SplashViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,13 +342,13 @@
 				CA2CBE022BF8DD3A00049F8F /* AppDelegate.swift in Sources */,
 				CA2CBE312BF8E00600049F8F /* UIView+.swift in Sources */,
 				CA2CBE2B2BF8DF9C00049F8F /* UIFont+.swift in Sources */,
-				CA2CBE542BF90EC300049F8F /* SplashViewController.swift in Sources */,
 				D0C0C0FE2BF8ED38005A7D5C /* UITextField+.swift in Sources */,
-				CA2CBE562BF90EDA00049F8F /* OnBoardingViewController.swift in Sources */,
+				CA2CBE592BF910E800049F8F /* OnBoardingViewController.swift in Sources */,
 				CA2CBE292BF8DF5600049F8F /* UICollectionViewCell+.swift in Sources */,
 				CA2CBE4E2BF90E7A00049F8F /* SuccessViewController.swift in Sources */,
 				CA2CBE502BF90E9600049F8F /* AlertViewController.swift in Sources */,
 				CA2CBE042BF8DD3A00049F8F /* SceneDelegate.swift in Sources */,
+				CA2CBE5C2BF915AF00049F8F /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
