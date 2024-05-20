@@ -6,14 +6,21 @@
 <br/>
 
 ### ✅ 서비스 이름 및 간단한 소개
-- 서비스 이름: Sees0
+- 서비스 이름: Sees0
 - 소개: 나의 TO-DO와 NOT-TO-DO를 한 번에 관리하는 나만의 균형 있는 TODO 앱 ‘Sees0’입니다.
+<img width="100%" src="https://github.com/34th-SOPKATHON-iOS-TEAM1/iOS/assets/105407130/e04edcdc-4bb2-4576-b692-bf12103c6e98">
 
 
-<br/>
+<br/><br/>
+
 
 ### 🛠️ 주요 기능
-<img width="70%" alt="스크린샷 2024-05-19 오전 12 42 35" src="https://github.com/34th-SOPKATHON-iOS-TEAM1/iOS/assets/105407130/9272ba20-2c6a-4040-8c6b-e83ea686e1b7">
+<p align="center">
+  <img src="https://github.com/34th-SOPKATHON-iOS-TEAM1/iOS/assets/105407130/5c3f90a7-e31d-4457-8e33-5ae0f77fdc8e" align="center" width="49%">
+  <img src="https://github.com/34th-SOPKATHON-iOS-TEAM1/iOS/assets/105407130/5a07dc21-adcf-468c-abe5-e2c8390a79e8" align="center" width="49%">
+  <figcaption align="center"></figcaption>
+</p>
+
 <br/><br/>
 
 ### 👩‍💻 About Developers
@@ -41,10 +48,10 @@
 <br/>
 
 ## 🍏 Branch Convention
-feature → 기능 구현
-setting → 세팅 관련
-refactor → 리팩토링 관련
-fix → 수정 관련
+- feature → 기능 구현
+- setting → 세팅 관련
+- refactor → 리팩토링 관련
+- fix → 수정 관련
 
 ex ) feature/#이슈번호,  refactor/#이슈번호
 
@@ -70,10 +77,12 @@ ex ) feature/#이슈번호,  refactor/#이슈번호
 │   ├── 🗂️ DTO
 │   ├── 🗂️ Services
 ├── 📁 Presentation
-│   ├── 🗂️ Main
-│   ├── 🗂️ 
-│   ├── 🗂️ 
-│   ├── 🗂️ 
+│   ├── 🗂️ Success
+│   ├── 🗂️ CheckToDo
+│   ├── 🗂️ ConfirmationAlert
+│   ├── 🗂️ RegisterToDo
+│   ├── 🗂️ Splash
+│   ├── 🗂️ OnBoarding
 │   │   │   ├── 🗂️ Cells
 │   │   │   ├── 🗂️ Views
 │   │   │   ├── 🗂️ ViewControllers
@@ -82,12 +91,9 @@ ex ) feature/#이슈번호,  refactor/#이슈번호
 <br/>
 
 ## 📸 시연영상
-|기능|스크린샷|
-|:--:|:--:|
-|아이폰15Pro|<img src = "" width ="250">|
-
-
 https://github.com/34th-SOPKATHON-iOS-TEAM1/iOS/assets/114901417/2f6b788f-7258-4f7e-a563-be9524471851
+
+
 
 
 
